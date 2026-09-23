@@ -1,31 +1,29 @@
-# Sweet Tea Astrology — First Mockup
+# Sweet Tea Astrology — First Production Mockup
 
-A responsive first-look website mockup for **Sweet Tea Astrology**.
+A polished, responsive, Vercel-ready first website mockup for **Sweet Tea Astrology**.
 
-## What this first mockup includes
+## Included
 
-- Premium celestial brand direction using the approved Sweet Tea Astrology logo
-- Responsive hero and navigation
-- Initial reading categories without invented prices or session lengths
+- Premium celestial brand direction using the approved Sweet Tea Astrology identity
+- Responsive desktop and mobile layouts
+- Accessible navigation and focus states
+- Reading categories without invented prices or session lengths
 - Black Moon Lilith educational guide feature
 - Social/video content direction for TikTok, YouTube, and Instagram
-- About Therry placeholder that does not fabricate biography details
-- Booking section ready for a future calendar/payment integration
+- About Therry area ready for her approved portrait and biography
+- Booking section ready for calendar/payment integration
 - Basic service disclaimer
+- Privacy-friendly security headers for Vercel
+- Search indexing disabled during the mockup stage
 
-## Run locally
+## Preview locally
 
-```bash
-npm install
-npm run dev
-```
+Open `index.html` directly in a modern browser.
 
-Then open http://localhost:3000.
+You can also serve the folder with any static web server.
 
-## Build
+## Deploy to Vercel
 
-```bash
-npm run build
-```
+Import this GitHub repository into Vercel. It is a static site and does not require a build command.
 
-This project is configured for a static export so the generated `out/` directory can also be hosted as a simple preview.
+Before public launch, remove the `noindex` meta tag and update `robots.txt` after the final business content is approved.
