@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0d20" />
+  <meta name="description" content="Meet Therry and learn the story and philosophy behind Sweet Tea Astrology." />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>About Therry | Sweet Tea Astrology</title>
+  <style>
+    :root{
+      --night:#080b1b;--night2:#11142f;--plum:#341541;--plum2:#511f62;
+      --gold:#f2c777;--gold2:#c99a4f;--ivory:#fff8ec;--ink:#20172e;
+      --muted:#665b6a;--white:#fffdf8;--serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --shell:min(1120px,calc(100% - 48px));
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth;background:var(--night)}
+    body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} ::selection{background:var(--gold);color:var(--ink)}
+    .shell{width:var(--shell);margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(8,11,27,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(242,199,119,.15);color:var(--white)}
+    .nav{min-height:78px;display:flex;align-items:center;gap:28px}
+    .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:19px;margin-right:auto}
+    .brand-symbol{color:var(--gold);font-size:28px}.nav a:not(.brand){font-size:13px;color:rgba(255,255,255,.68)}
+    .nav a:hover{color:var(--gold)}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:999px;background:linear-gradient(135deg,#f7d795,var(--gold));color:#2d1c35!important;font-size:12px!important;font-weight:800}
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 78% 20%,rgba(125,76,148,.30),transparent 30%),
+      radial-gradient(circle at 18% 15%,rgba(242,199,119,.09),transparent 24%),
+      linear-gradient(135deg,#060918,#0d1029 56%,#180d2a);color:var(--white);padding:120px 0 112px}
+    .hero:after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(#fff 0 1px,transparent 1.3px);background-size:120px 120px;opacity:.16}
+    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:80px;align-items:center}
+    .eyebrow{margin:0 0 22px;color:var(--gold);font-size:11px;font-weight:850;letter-spacing:.22em;text-transform:uppercase}
+    h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}h1{font-size:clamp(58px,7vw,100px);line-height:.94;letter-spacing:-.05em}
+    h1 em,h2 em{color:var(--gold);font-weight:400}.hero p{max-width:690px;color:rgba(255,255,255,.67);font-size:18px;line-height:1.78;margin:28px 0 0}
+    .portrait{min-height:480px;border-radius:36px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(242,199,119,.11),transparent 29%),linear-gradient(145deg,#12162f,#2b1336);border:1px solid rgba(242,199,119,.16)}
+    .portrait:before,.portrait:after{content:"";position:absolute;border:1px solid rgba(242,199,119,.18);border-radius:50%}.portrait:before{width:330px;height:330px}.portrait:after{width:430px;height:430px;opacity:.5}
+    .moon{position:absolute;color:rgba(242,199,119,.16);font-family:var(--serif);font-size:300px;transform:translateX(42px)}
+    .monogram{position:relative;z-index:2;width:170px;height:170px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(242,199,119,.3);color:var(--gold);font:78px var(--serif);background:rgba(255,255,255,.035)}
+    .portrait small{position:absolute;bottom:26px;color:rgba(255,255,255,.36);font-size:9px;font-weight:800;letter-spacing:.16em}
+    .story{padding:112px 0}.story-grid{display:grid;grid-template-columns:.58fr 1.42fr;gap:80px}
+    .section-label{position:sticky;top:112px;align-self:start}.section-label span{color:var(--gold2);font-size:10px;font-weight:850;letter-spacing:.2em}.section-label h2{font-size:clamp(38px,4.4vw,66px);line-height:1;letter-spacing:-.04em;margin-top:16px}
+    .prose{max-width:760px}.prose p{margin:0 0 24px;color:var(--muted);font-size:17px;line-height:1.88}.prose .lead{font-family:var(--serif);font-size:28px;line-height:1.45;color:var(--ink)}
+    .why{padding:112px 0;background:#f4e8d5}.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}.why h2{font-size:clamp(46px,5vw,76px);line-height:.98;letter-spacing:-.045em}.why-copy p{margin:0 0 22px;color:var(--muted);font-size:17px;line-height:1.85}
+    .philosophy{padding:118px 0;background:linear-gradient(135deg,#2b1239,#3c1749 55%,#25102f);color:var(--white);text-align:center}.philosophy blockquote{max-width:920px;margin:0 auto;font:clamp(34px,4.4vw,62px)/1.12 var(--serif);letter-spacing:-.03em}.philosophy blockquote em{color:var(--gold);font-style:normal}.philosophy p{margin:26px auto 0;max-width:650px;color:rgba(255,255,255,.57);line-height:1.75}
+    .cta{padding:92px 0;text-align:center}.cta h2{font-size:clamp(44px,5vw,72px);letter-spacing:-.04em}.cta p{color:var(--muted);margin:20px auto 28px;max-width:600px;line-height:1.7}
+    footer{background:var(--night);color:rgba(255,255,255,.5);padding:34px 0}.footer{display:flex;justify-content:space-between;gap:24px;font-size:11px}.footer strong{color:var(--white);font-family:var(--serif);font-size:16px}
+    @media(max-width:820px){.nav>a:not(.brand):not(.button){display:none}.hero{padding:86px 0 78px}.hero-inner,.story-grid,.why-grid{grid-template-columns:1fr}.portrait{min-height:380px}.story-grid,.why-grid{gap:46px}.section-label{position:static}.footer{flex-direction:column}}
+    @media(max-width:560px){:root{--shell:min(100% - 30px,1120px)}.nav{min-height:68px}.button{padding:0 15px}.hero p,.prose p,.why-copy p{font-size:15px}.prose .lead{font-size:24px}.portrait{min-height:330px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><span class="brand-symbol">☾</span><span>Sweet Tea Astrology</span></a>
+      <a href="index.html#readings">Readings</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a class="button" href="index.html#book">Book a reading</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-inner">
+        <div>
+          <p class="eyebrow">ABOUT SWEET TEA ASTROLOGY</p>
+          <h1>Hi, I’m Therry.<br><em>Welcome in.</em></h1>
+          <p>My journey into astrology began in my twenties with a simple question: could understanding my birth chart really help me understand my purpose in life?</p>
+        </div>
+        <div class="portrait" aria-label="Portrait area for Therry">
+          <div class="moon">☾</div><div class="monogram">T</div><small>THERRY’S PORTRAIT</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="shell story-grid">
+        <div class="section-label">
+          <span>HOW IT STARTED</span>
+          <h2>Curiosity became a <em>lifelong practice.</em></h2>
+        </div>
+        <div class="prose">
+          <p class="lead">I had read a book that suggested understanding a birth chart could help us understand our purpose, and like many twenty-somethings trying to figure out who they are and where they’re going, I was fascinated by the idea.</p>
+          <p>I wanted to know: could astrology really reveal something meaningful about the path we are here to walk?</p>
+          <p>I couldn’t afford to have my chart professionally read, so I bought a couple of astrology books and decided I would learn how to read it myself.</p>
+          <p>That curiosity grew into what has now been more than 25 years of practicing astrology and helping others through it. Over the years, I’ve explored astrology through extensive reading, chart work, observation, continuing education and, most importantly, the experience of watching astrological patterns unfold in real people’s lives.</p>
+          <p>And after all these years, I’ve discovered that the answer to that question I asked in my twenties is <strong>yes</strong>. Astrology really can help us recognize our own purpose and better understand the path we’re here to walk.</p>
+          <p>That discovery transformed astrology for me from something fascinating into something genuinely useful. A birth chart can reveal remarkable patterns in personality, relationships and life direction, but astrology becomes even more powerful when we begin working with timing—understanding not only the patterns we were born with, but the seasons of change, opportunity and challenge that unfold throughout our lives.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="shell why-grid">
+        <div>
+          <p class="eyebrow" style="color:var(--gold2)">WHY I LOVE ASTROLOGY</p>
+          <h2>Insight that becomes <em style="color:var(--plum2)">useful.</em></h2>
+        </div>
+        <div class="why-copy">
+          <p>What I love most about astrology is that it can help us understand our natural strengths and challenges.</p>
+          <p>It can help us recognize the people with whom we connect most naturally—and understand why certain relationships require more work. It can help us choose better timing for important activities and decisions. And during the difficult chapters of life, astrology can provide a larger perspective that helps us navigate those periods with greater calm, intention and purpose.</p>
+          <p>One of the most rewarding parts of giving readings is hearing afterward how the astrology reflected someone’s actual experience or helped them see their situation more clearly. Knowing that the insight was useful to them is why I love sharing and teaching astrology.</p>
+          <p>More than 25 years after opening <strong>my first astrology book</strong>, I’m still fascinated by what astrology can reveal. There is always another layer to discover, another technique to explore and another chart that reminds me why I fell in love with astrology in the first place.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <div class="shell">
+        <p class="eyebrow">MY APPROACH</p>
+        <blockquote>I don’t believe astrology should tell you how to live your life. <em>I believe it should help you understand the landscape so you can navigate your life more intentionally.</em></blockquote>
+        <p>That idea sits at the heart of Sweet Tea Astrology: insight as a tool for perspective, choice, and a clearer conversation with your own life.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="shell">
+        <p class="eyebrow" style="color:var(--gold2)">WHEN YOU’RE READY</p>
+        <h2>Come curious.</h2>
+        <p>Explore the readings being shaped for Sweet Tea Astrology, or return to the homepage to keep looking around.</p>
+        <a class="button" href="index.html#readings">Explore readings ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer"><strong>Sweet Tea Astrology</strong><span>Light, love & a little cosmic perspective.</span></div></footer>
+</body>
+</html>
