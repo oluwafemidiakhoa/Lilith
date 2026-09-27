@@ -191,14 +191,9 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
 .about { padding: 118px 0; }
 .about-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(60px, 8vw, 120px); align-items: center; }
-.portrait-placeholder { min-height: 520px; position: relative; display: grid; place-items: center; overflow: hidden; border-radius: 34px; background: radial-gradient(circle at 50% 43%, rgba(242,199,119,.09), transparent 30%), linear-gradient(145deg,#11142f,#2a1236); box-shadow: var(--shadow); }
-.portrait-placeholder::before { content: ""; position: absolute; inset: 0; opacity: .22; background-image: radial-gradient(#fff 0 1px, transparent 1.4px); background-size: 82px 82px; }
-.portrait-placeholder > span { position: absolute; bottom: 28px; color: rgba(255,255,255,.38); font-size: 9px; font-weight: 850; letter-spacing: .18em; }
-.portrait-monogram { position: relative; z-index: 2; width: 190px; height: 190px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.04); border: 1px solid rgba(242,199,119,.28); color: var(--gold); font-family: var(--serif); font-size: 84px; }
-.portrait-moon { position: absolute; color: rgba(242,199,119,.18); font-family: var(--serif); font-size: 340px; transform: translateX(45px); }
-.portrait-orbit { position: absolute; border: 1px solid rgba(242,199,119,.16); border-radius: 50%; }
-.orbit-one { width: 360px; height: 360px; }
-.orbit-two { width: 470px; height: 470px; opacity: .55; }
+.portrait-photo { position: relative; overflow: hidden; border-radius: 34px; aspect-ratio: 3 / 4; background:#17142b; border:1px solid rgba(201,154,79,.2); box-shadow: var(--shadow); }
+.portrait-photo img { width:100%; height:100%; object-fit:cover; object-position:center 42%; display:block; }
+.portrait-photo::after { content:""; position:absolute; inset:0; pointer-events:none; box-shadow:inset 0 0 0 1px rgba(255,255,255,.05); border-radius:inherit; }
 .about-lede { color: #625866; font-size: 18px; line-height: 1.8; max-width: 640px; }
 .about-rule { width: 70px; height: 1px; background: var(--gold-2); margin: 28px 0; }
 .about-note { color: #8c818e; font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.55; max-width: 580px; }
@@ -250,7 +245,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .symbol-card { grid-column: 1 / -1; min-height: 260px; flex-direction: row; align-items: end; gap: 30px; }
   .learning-grid, .about-grid { grid-template-columns: 1fr; }
   .guide-card { max-width: 720px; margin: 0 auto; }
-  .portrait-placeholder { max-width: 650px; width: 100%; margin: 0 auto; }
+  .portrait-photo { max-width: 650px; width: 100%; margin: 0 auto; }
 }
 
 @media (max-width: 760px) {
@@ -284,7 +279,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .social-cards { grid-template-columns: 1fr; }
   .social-card { min-height: 330px; }
   .symbol-card { grid-column: auto; min-height: 300px; flex-direction: column; align-items: flex-start; }
-  .portrait-placeholder { min-height: 420px; }
+  .portrait-photo { max-width: 520px; }
   .portrait-monogram { width: 150px; height: 150px; font-size: 68px; }
   .portrait-moon { font-size: 280px; }
   .orbit-one { width: 290px; height: 290px; }
@@ -581,18 +576,14 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
     <section class="about section-ivory" id="about" aria-labelledby="about-heading">
       <div class="shell about-grid">
-        <div class="portrait-placeholder reveal" aria-label="Portrait area for Therry">
-          <div class="portrait-orbit orbit-one"></div>
-          <div class="portrait-orbit orbit-two"></div>
-          <div class="portrait-moon" aria-hidden="true">☾</div>
-          <div class="portrait-monogram" aria-hidden="true">T</div>
-          <span>THERRY’S PORTRAIT</span>
+        <div class="portrait-photo reveal">
+          <img src="ChatGPT%20Image%20Sep%2027%2C%202026%2C%2009_44_50%20AM.png" alt="Therry in her Sweet Tea Astrology space" width="1086" height="1448" loading="lazy" />
         </div>
         <div class="about-copy reveal delay-1">
           <p class="eyebrow eyebrow-dark">MEET THERRY</p>
           <h2 id="about-heading">From curiosity to a <em>lifelong practice.</em></h2>
           <p class="about-lede">
-            My journey into astrology began in my twenties with a simple question: could understanding my birth chart really help me understand my purpose in life?
+            In my twenties I read a book that claimed you could know your purpose in life if you could read your birth chart in astrology. Like many people in their twenties trying to figure out who they are and where they are going in life, I was fascinated by this idea.
           </p>
           <p class="about-lede">
             I couldn’t afford a professional reading, so I bought a couple of astrology books and began learning for myself. That curiosity grew into more than 25 years of practicing astrology, studying charts, and helping others understand the patterns unfolding in their own lives.
