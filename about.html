@@ -35,10 +35,7 @@
     h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}h1{font-size:clamp(58px,7vw,100px);line-height:.94;letter-spacing:-.05em}
     h1 em,h2 em{color:var(--gold);font-weight:400}.hero p{max-width:690px;color:rgba(255,255,255,.67);font-size:18px;line-height:1.78;margin:28px 0 0}
     .portrait{min-height:480px;border-radius:36px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(242,199,119,.11),transparent 29%),linear-gradient(145deg,#12162f,#2b1336);border:1px solid rgba(242,199,119,.16)}
-    .portrait:before,.portrait:after{content:"";position:absolute;border:1px solid rgba(242,199,119,.18);border-radius:50%}.portrait:before{width:330px;height:330px}.portrait:after{width:430px;height:430px;opacity:.5}
-    .moon{position:absolute;color:rgba(242,199,119,.16);font-family:var(--serif);font-size:300px;transform:translateX(42px)}
-    .monogram{position:relative;z-index:2;width:170px;height:170px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(242,199,119,.3);color:var(--gold);font:78px var(--serif);background:rgba(255,255,255,.035)}
-    .portrait small{position:absolute;bottom:26px;color:rgba(255,255,255,.36);font-size:9px;font-weight:800;letter-spacing:.16em}
+    .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}.portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 68%,rgba(8,11,27,.18));pointer-events:none}
     .story{padding:112px 0}.story-grid{display:grid;grid-template-columns:.58fr 1.42fr;gap:80px}
     .section-label{position:sticky;top:112px;align-self:start}.section-label span{color:var(--gold2);font-size:10px;font-weight:850;letter-spacing:.2em}.section-label h2{font-size:clamp(38px,4.4vw,66px);line-height:1;letter-spacing:-.04em;margin-top:16px}
     .prose{max-width:760px}.prose p{margin:0 0 24px;color:var(--muted);font-size:17px;line-height:1.88}.prose .lead{font-family:var(--serif);font-size:28px;line-height:1.45;color:var(--ink)}
@@ -69,8 +66,8 @@
           <h1>Hi, I’m Therry.<br><em>Welcome to Sweet Tea Astrology.</em></h1>
           <p>My journey into astrology began in my twenties with a simple question: <strong>Could understanding my birth chart really help me understand my purpose in life?</strong></p>
         </div>
-        <div class="portrait" aria-label="Portrait area for Therry">
-          <div class="moon">☾</div><div class="monogram">T</div><small>THERRY’S PORTRAIT</small>
+        <div class="portrait">
+          <img src="assets/therry-about.webp" alt="Sweet Tea Astrology portrait" width="480" height="640" />
         </div>
       </div>
     </section>
