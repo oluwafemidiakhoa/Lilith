@@ -248,6 +248,10 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .portrait-photo { max-width: 650px; width: 100%; margin: 0 auto; }
 }
 
+@media (max-width: 900px) {
+  #monthly-circle > .shell { grid-template-columns: 1fr !important; }
+}
+
 @media (max-width: 760px) {
   :root { --shell: min(100% - 32px, 1180px); }
   .nav-shell { min-height: 74px; }
@@ -314,6 +318,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="services.html">Readings</a>
+        <a href="services.html#circle">Monthly Circle</a>
         <a href="#learn">Learn</a>
         <a href="about.html">About</a>
         <a href="#connect">Connect</a>
@@ -330,6 +335,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
       <a href="services.html">Readings</a>
+      <a href="services.html#circle">Monthly Circle</a>
       <a href="#learn">Learn</a>
       <a href="about.html">About</a>
       <a href="#connect">Connect</a>
@@ -475,12 +481,29 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
         </div>
 
         <div style="display:flex;justify-content:center;margin-top:42px">
-          <a class="button button-gold" href="services.html">Explore all five readings <span aria-hidden="true">↗</span></a>
+          <a class="button button-gold" href="services.html">Explore readings & pricing <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="process section-plum" aria-labelledby="process-heading">
+    
+    <section class="section-ivory" id="monthly-circle" aria-labelledby="monthly-circle-heading" style="padding:112px 0">
+      <div class="shell" style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(50px,7vw,90px);align-items:center">
+        <div class="reveal">
+          <p class="eyebrow eyebrow-dark">MONTHLY LIVE CLASS</p>
+          <h2 id="monthly-circle-heading">Sweet Tea Astrology <em>Circle.</em></h2>
+          <p style="color:#675e6b;font-size:16px;line-height:1.8;max-width:640px">A relaxed monthly Zoom gathering with Therry: a short astrology lesson, chart examples, questions, and time to explore together.</p>
+          <a class="editorial-link" href="services.html#circle">See the monthly class <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="reveal delay-1" style="padding:34px;border-radius:28px;background:linear-gradient(145deg,#17142f,#31173c);color:var(--white);box-shadow:var(--shadow)">
+          <p class="mini-label">STARTING PRICE</p>
+          <div style="font:58px/1 var(--serif);color:var(--gold);margin:12px 0 18px">$30 <span style="font:12px var(--sans);color:rgba(255,255,255,.52)">per person</span></div>
+          <p style="margin:0;color:rgba(255,255,255,.62);font-size:14px;line-height:1.7">Registration, payment, confirmation, reminders, and Zoom access will be connected as the class schedule is finalized.</p>
+        </div>
+      </div>
+    </section>
+
+<section class="process section-plum" aria-labelledby="process-heading">
       <div class="shell process-grid">
         <div class="process-intro reveal">
           <p class="eyebrow">HOW IT CAN WORK</p>
