@@ -41,10 +41,14 @@
     .service-title h2{font-size:clamp(34px,4.2vw,60px);line-height:1;letter-spacing:-.04em}.question{margin-top:11px;font-family:var(--serif);font-size:24px;color:var(--plum2);font-style:italic}
     .copy{max-width:820px;margin-top:26px}.copy p{margin:0 0 19px;color:var(--muted);font-size:16px;line-height:1.82}.copy p:first-child{color:var(--ink)}
     .note{margin-top:26px;padding:18px 20px;border-radius:18px;background:var(--cream);color:#6c5f6e;font-size:13px;line-height:1.65;border:1px solid rgba(201,154,79,.18)}
+    .pricing{padding:86px 0;background:var(--cream)}.pricing-head{max-width:800px;margin-bottom:36px}.pricing-head h2{font-size:clamp(38px,4.6vw,66px);line-height:1;letter-spacing:-.04em}.pricing-head p{color:var(--muted);line-height:1.75}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price-card{padding:28px;border-radius:26px;background:var(--white);border:1px solid rgba(52,21,65,.1);box-shadow:0 18px 45px rgba(52,21,65,.07)}.price-card.featured{background:linear-gradient(145deg,#17142f,#31173c);color:var(--white);border-color:rgba(242,199,119,.2)}.price-kicker{font-size:9px;font-weight:850;letter-spacing:.18em;color:var(--gold2);text-transform:uppercase}.price-card.featured .price-kicker{color:var(--gold)}.price-card h3{font-size:30px;margin-top:10px}.price{font:42px/1 var(--serif);margin:20px 0 8px}.price small{font:12px var(--sans);color:var(--muted)}.price-card.featured .price small{color:rgba(255,255,255,.55)}.price-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}.price-card.featured p{color:rgba(255,255,255,.62)}
+    .service-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.service-option{padding:10px 13px;border-radius:999px;background:#f2e6d3;border:1px solid rgba(201,154,79,.22);font-size:11px;font-weight:800;color:var(--plum)}.service-option.deep{background:var(--plum);color:var(--gold);border-color:rgba(242,199,119,.28)}
+    .circle-offer{padding:110px 0;background:linear-gradient(135deg,#0b0f25,#24102f 58%,#341541);color:var(--white)}.circle-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}.circle-offer h2{font-size:clamp(46px,5.4vw,78px);line-height:.98;letter-spacing:-.045em}.circle-offer h2 em{color:var(--gold)}.circle-offer p{color:rgba(255,255,255,.64);line-height:1.78}.circle-card{padding:30px;border-radius:28px;background:rgba(255,255,255,.05);border:1px solid rgba(242,199,119,.18)}.circle-price{font:52px/1 var(--serif);color:var(--gold);margin:8px 0 16px}.circle-price span{font:12px var(--sans);color:rgba(255,255,255,.5)}.circle-points{display:grid;gap:12px;margin-top:22px}.circle-points div{padding-top:12px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.66)}.status-pill{display:inline-flex;padding:8px 11px;border-radius:999px;background:rgba(242,199,119,.1);border:1px solid rgba(242,199,119,.22);color:var(--gold);font-size:9px;font-weight:850;letter-spacing:.15em;text-transform:uppercase}
     .cta{padding:108px 0;text-align:center;background:linear-gradient(135deg,#2b1239,#3c1749 55%,#25102f);color:var(--white)}.cta h2{font-size:clamp(48px,5.5vw,80px);line-height:.98;letter-spacing:-.045em}
     .cta p{max-width:640px;margin:23px auto 30px;color:rgba(255,255,255,.58);line-height:1.75}.cta .button{min-height:54px;padding:0 24px}
     footer{background:var(--night);color:rgba(255,255,255,.5);padding:34px 0}.footer{display:flex;justify-content:space-between;gap:24px;font-size:11px}.footer strong{color:var(--white);font-family:var(--serif);font-size:16px}
-    @media(max-width:820px){.nav>a:not(.brand):not(.button){display:none}.hero{padding:88px 0 80px}.service{grid-template-columns:1fr}.index{width:52px;height:52px}.service-head{display:block}.footer{flex-direction:column}}
+    @media(max-width:820px){.nav>a:not(.brand):not(.button){display:none}.hero{padding:88px 0 80px}.service{grid-template-columns:1fr}.index{width:52px;height:52px}.service-head{display:block}.pricing-grid,.circle-grid{grid-template-columns:1fr}.footer{flex-direction:column}}
     @media(max-width:560px){:root{--shell:min(100% - 30px,1120px)}.nav{min-height:68px}.button{padding:0 15px}.hero p,.copy p{font-size:15px}.question{font-size:21px}.services{padding:76px 0}.service{padding:44px 0}}
   </style>
 </head>
@@ -54,6 +58,7 @@
       <a class="brand" href="index.html"><span class="brand-symbol">☾</span><span>Sweet Tea Astrology</span></a>
       <a href="services.html" aria-current="page">Readings</a>
       <a href="index.html#learn">Learn</a>
+      <a href="#circle">Monthly Circle</a>
       <a href="about.html">About</a>
       <a class="button" href="index.html#book">Book a reading</a>
     </div>
@@ -75,6 +80,36 @@
       </div>
     </section>
 
+    <section class="pricing" aria-labelledby="pricing-heading">
+      <div class="shell">
+        <div class="pricing-head">
+          <p class="eyebrow" style="color:var(--gold2)">SIMPLE STARTING PRICES</p>
+          <h2 id="pricing-heading">Choose the depth that fits the question.</h2>
+          <p>The focused option is read live with you. The prepared option includes private chart analysis before the appointment so Therry can arrive with the deeper patterns already mapped out.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="price-kicker">FOCUSED READING</span>
+            <h3>Live &amp; conversational</h3>
+            <div class="price">$80 <small>/ 30 minutes</small></div>
+            <p>Your chart is generated for the session and the reading happens live, centered on the question or theme you bring.</p>
+          </article>
+          <article class="price-card featured">
+            <span class="price-kicker">IN-DEPTH PREPARED READING</span>
+            <h3>Prepared before you meet</h3>
+            <div class="price">$160 <small>/ 45 minutes</small></div>
+            <p>Includes about 30 minutes of private chart analysis before the appointment, followed by a deeper 45-minute consultation.</p>
+          </article>
+          <article class="price-card">
+            <span class="price-kicker">EXTRA TIME</span>
+            <h3>Keep the conversation going</h3>
+            <div class="price">$40 <small>/ additional 15 minutes</small></div>
+            <p>Add a simple time extension when a focused reading needs more room.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="services">
       <div class="shell">
         <article class="service" id="birth-chart">
@@ -86,6 +121,8 @@
               <p>Your birth chart maps your unique energies. Together, we’ll explore your strengths, challenges, recurring patterns, and the parts of yourself seeking greater expression.</p>
               <p>We’ll look at how to work with these energies consciously, better understand yourself, make authentic choices, and create more happiness and fulfillment in your life.</p>
             </div>
+          
+            <div class="service-options"><span class="service-option deep">$160 · 45 min prepared</span></div>
           </div>
         </article>
 
@@ -98,6 +135,8 @@
               <p>A transit reading looks at the planetary energies influencing you <strong>right now</strong> and the areas of your life being activated. We’ll explore why certain themes may be coming to the surface and how long these influences will last.</p>
               <p>Together, we will explore how to use the current energy patterns to your advantage and create more joy in the season of life you are in.</p>
             </div>
+          
+            <div class="service-options"><span class="service-option">$80 · 30 min focused</span><span class="service-option deep">$160 · 45 min prepared</span></div>
           </div>
         </article>
 
@@ -110,6 +149,8 @@
               <p>A synastry reading compares two birth charts to explore the connections between you. We’ll look at where attraction and understanding come naturally, where tension or misunderstandings may arise, and the deeper patterns that draw you together.</p>
               <p>Together, we’ll explore what each of you brings out in the other and how understanding those patterns can help you navigate the relationship with greater awareness, connection, and joy.</p>
             </div>
+          
+            <div class="service-options"><span class="service-option">$80 · 30 min focused</span><span class="service-option deep">$160 · 45 min prepared</span></div>
           </div>
         </article>
 
@@ -122,6 +163,8 @@
               <p>A Solar Return reading explores the themes and opportunities of the year ahead. We’ll look at your birthday chart along with your birth chart and important transits to see which areas of your life are being emphasized and where change, growth, or new possibilities may be emerging.</p>
               <p>Together, we’ll explore how you can work with the energies of your year more intentionally—helping you recognize opportunities, navigate challenges, and create more of what you want in the year ahead.</p>
             </div>
+          
+            <div class="service-options"><span class="service-option">$80 · 30 min</span><span class="service-option">+ $40 · extra 15 min</span></div>
           </div>
         </article>
 
@@ -134,10 +177,34 @@
               <p>A Purpose &amp; Direction reading explores the parts of your birth chart that speak to your natural gifts, motivations, and the path of action that will help you feel most fulfilled and happy in life.</p>
               <p>Together, we’ll look for the threads that run through your chart and connect them into a bigger picture—helping you understand what gives your life meaning, where and how you may feel called to grow, and how you can create a life that feels more authentically your own.</p>
             </div>
+          
+            <div class="service-options"><span class="service-option">$80 · 30 min</span><span class="service-option">+ $40 · extra 15 min</span></div>
           </div>
         </article>
 
-        <div class="note">Session lengths, pricing, booking method, and payment details will be added after Therry confirms them.</div>
+        <div class="note"><strong>Good to know:</strong> prepared readings include private chart analysis before the appointment. Online booking and payment are the next integration step.</div>
+      </div>
+    </section>
+
+    <section class="circle-offer" id="circle" aria-labelledby="circle-heading">
+      <div class="shell circle-grid">
+        <div>
+          <span class="status-pill">Monthly live class · coming soon</span>
+          <p class="eyebrow" style="margin-top:22px">SWEET TEA ASTROLOGY CIRCLE</p>
+          <h2 id="circle-heading">Learn a little. <em>Play with charts.</em> Talk astrology together.</h2>
+          <p>A relaxed monthly Zoom gathering with Therry: a short teaching topic, chart examples, questions, and conversation. It is designed for people who want to keep learning and come back month after month.</p>
+        </div>
+        <div class="circle-card">
+          <span class="price-kicker" style="color:var(--gold)">MONTHLY LIVE ZOOM CLASS</span>
+          <div class="circle-price">$30 <span>per person</span></div>
+          <p>One live class each month. Topic and date will be announced before registration opens.</p>
+          <div class="circle-points">
+            <div>✦ Short astrology lesson from Therry</div>
+            <div>✦ Work with charts together and ask questions</div>
+            <div>✦ Registration confirmation and class reminders will be automated</div>
+            <div>✦ Zoom access delivered to registered attendees</div>
+          </div>
+        </div>
       </div>
     </section>
 
