@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080b1b" />
+  <meta name="description" content="Book a Sweet Tea Astrology reading or join Therry's monthly live astrology circle." />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Book | Sweet Tea Astrology</title>
+  <style>
+    :root{
+      --night:#080b1b;--night2:#11142f;--plum:#341541;--plum2:#511f62;
+      --gold:#f2c777;--gold2:#c99a4f;--ivory:#fff8ec;--cream:#f4e8d5;
+      --ink:#20172e;--muted:#6f6472;--white:#fffdf8;
+      --serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --shell:min(1120px,calc(100% - 48px));--shadow:0 28px 72px rgba(25,15,35,.16)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--night)}
+    body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}.shell{width:var(--shell);margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(8,11,27,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(242,199,119,.14);color:var(--white)}
+    .nav{min-height:78px;display:flex;align-items:center;gap:26px}.brand{margin-right:auto;display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:19px}.brand-symbol{color:var(--gold);font-size:28px}.nav>a:not(.brand):not(.button){font-size:13px;color:rgba(255,255,255,.68)}.nav>a:hover{color:var(--gold)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 21px;border-radius:999px;border:1px solid transparent;background:linear-gradient(135deg,#f7d795,var(--gold));color:#2d1c35;font-size:12px;font-weight:850;cursor:pointer}
+    .button.secondary{background:transparent;border-color:rgba(52,21,65,.2);color:var(--plum)}.button.disabled{opacity:.48;cursor:not-allowed}
+    .hero{position:relative;overflow:hidden;padding:110px 0 86px;color:var(--white);background:radial-gradient(circle at 78% 18%,rgba(115,67,138,.32),transparent 32%),linear-gradient(135deg,#060918,#0d1029 55%,#180d2a)}
+    .hero:after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 0 1px,transparent 1.3px);background-size:116px 116px;opacity:.14;pointer-events:none}.hero-inner{position:relative;z-index:2;max-width:920px}.eyebrow{margin:0 0 18px;color:var(--gold);font-size:10px;font-weight:850;letter-spacing:.22em;text-transform:uppercase}
+    h1,h2,h3{margin:0;font-family:var(--serif);font-weight:400}h1{font-size:clamp(56px,7vw,98px);line-height:.94;letter-spacing:-.05em}.hero p{max-width:720px;margin:25px 0 0;color:rgba(255,255,255,.67);font-size:17px;line-height:1.8}
+    .jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}.jump a{padding:10px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;font-size:11px;color:rgba(255,255,255,.75)}
+    .section{padding:92px 0}.section-head{max-width:780px;margin-bottom:36px}.section-head h2{font-size:clamp(40px,4.8vw,66px);line-height:1;letter-spacing:-.04em}.section-head p{color:var(--muted);line-height:1.75}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px;border-radius:26px;background:var(--white);border:1px solid rgba(52,21,65,.1);box-shadow:0 15px 42px rgba(52,21,65,.06)}.card.featured{background:linear-gradient(145deg,#17142f,#31173c);color:var(--white);border-color:rgba(242,199,119,.2)}
+    .kicker{display:block;color:var(--gold2);font-size:9px;font-weight:850;letter-spacing:.17em;text-transform:uppercase}.featured .kicker{color:var(--gold)}.card h3{margin-top:9px;font-size:28px}.price{font:42px/1 var(--serif);margin:20px 0 9px}.price small{font:12px var(--sans);color:var(--muted)}.featured .price small{color:rgba(255,255,255,.5)}.card p{color:var(--muted);font-size:14px;line-height:1.7}.featured p{color:rgba(255,255,255,.63)}
+    .service-menu{margin-top:30px;border-top:1px solid rgba(52,21,65,.12)}.service-row{display:grid;grid-template-columns:52px 1fr auto;gap:22px;align-items:center;padding:24px 0;border-bottom:1px solid rgba(52,21,65,.12)}.service-row .num{color:var(--gold2);font-family:var(--serif);font-size:20px}.service-row strong{display:block;font-family:var(--serif);font-size:24px;font-weight:500}.service-row span{font-size:12px;color:var(--muted)}.pillset{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}.pill{padding:8px 10px;border-radius:999px;background:var(--cream);color:var(--plum);font-size:10px;font-weight:800}.pill.deep{background:var(--plum);color:var(--gold)}
+    .availability{background:var(--cream)}.availability-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}.rules{display:grid;gap:14px}.rule{padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.66);border:1px solid rgba(52,21,65,.08)}.rule strong{display:block;font-family:var(--serif);font-size:20px;margin-bottom:4px}.rule span{color:var(--muted);font-size:13px;line-height:1.6}
+    .calendar-shell{padding:28px;border-radius:28px;background:var(--white);box-shadow:var(--shadow);border:1px solid rgba(52,21,65,.08)}.calendar-shell h3{font-size:30px}.calendar-shell p{color:var(--muted);line-height:1.7}.calendar-placeholder{margin-top:22px;padding:26px;border-radius:20px;border:1px dashed rgba(52,21,65,.22);background:#fffaf3;text-align:center}.calendar-placeholder strong{display:block;font-family:var(--serif);font-size:24px;color:var(--plum)}.calendar-placeholder span{display:block;margin-top:8px;color:var(--muted);font-size:13px;line-height:1.6}
+    .reminder-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.choice{padding:14px;border-radius:16px;border:1px solid rgba(52,21,65,.12);background:var(--ivory);text-align:center}.choice strong{display:block;font-size:13px}.choice small{color:var(--muted)}
+    .circle{padding:102px 0;background:radial-gradient(circle at 75% 20%,rgba(95,45,114,.4),transparent 30%),linear-gradient(135deg,#0a0e23,#251031 60%,#341541);color:var(--white)}.circle-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:68px;align-items:center}.circle h2{font-size:clamp(46px,5.4vw,76px);line-height:.98;letter-spacing:-.045em}.circle h2 em{color:var(--gold)}.circle p{color:rgba(255,255,255,.65);line-height:1.8}.event-card{padding:30px;border-radius:28px;background:rgba(255,255,255,.05);border:1px solid rgba(242,199,119,.2)}.event-card .date{font:34px/1.15 var(--serif);color:var(--gold);margin:10px 0 14px}.event-card .topic{font:30px/1.08 var(--serif);margin:0 0 18px}.event-meta{display:grid;gap:11px;margin-top:22px}.event-meta div{padding-top:11px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.66)}
+    .status{display:inline-flex;padding:8px 11px;border-radius:999px;background:rgba(242,199,119,.1);border:1px solid rgba(242,199,119,.22);color:var(--gold);font-size:9px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+    .written{padding:84px 0;background:var(--ivory)}.written-box{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:32px;border-radius:26px;border:1px solid rgba(52,21,65,.1);background:var(--white)}.written-box h2{font-size:40px}.written-box p{margin-bottom:0;color:var(--muted);line-height:1.7}
+    .policy{padding:86px 0;background:#f2e6d3}.policy-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.policy-card{padding:25px;border-radius:22px;background:rgba(255,255,255,.64);border:1px solid rgba(52,21,65,.08)}.policy-card h3{font-size:25px;margin-bottom:9px}.policy-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+    .footer{padding:36px 0;background:var(--night);color:rgba(255,255,255,.48)}.footer-inner{display:flex;justify-content:space-between;gap:24px;font-size:11px}.footer strong{color:var(--white);font-family:var(--serif);font-size:16px}
+    @media(max-width:900px){.grid,.circle-grid,.availability-grid,.policy-grid{grid-template-columns:1fr}.written-box{grid-template-columns:1fr}.service-row{grid-template-columns:44px 1fr}.pillset{grid-column:2;justify-content:flex-start}.reminder-choices{grid-template-columns:1fr}.nav>a:not(.brand):not(.button){display:none}}
+    @media(max-width:560px){:root{--shell:min(100% - 30px,1120px)}.nav{min-height:68px}.hero{padding:84px 0 70px}.section{padding:70px 0}.service-row strong{font-size:21px}.circle{padding:76px 0}.event-card{padding:24px}.footer-inner{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><span class="brand-symbol">☾</span><span>Sweet Tea Astrology</span></a>
+      <a href="services.html">Readings</a>
+      <a href="#circle">Monthly Circle</a>
+      <a href="about.html">About</a>
+      <a class="button" href="#private">Plan a booking</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-inner">
+        <p class="eyebrow">BOOK WITH THERRY</p>
+        <h1>A calm, clear way to choose what you need.</h1>
+        <p>Choose a private reading or join the monthly astrology circle. Therry will open only the appointment times that work around her nursing schedule, so the calendar stays flexible for both of you.</p>
+        <div class="jump">
+          <a href="#private">Private readings</a>
+          <a href="#availability">How scheduling works</a>
+          <a href="#circle">Nov. 21 live class</a>
+          <a href="#policy">Policies</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="private">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow" style="color:var(--gold2)">PRIVATE READINGS</p>
+          <h2>Choose the depth that fits your question.</h2>
+          <p>Focused sessions are conversational and read live. Prepared sessions include private chart analysis before the appointment.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="kicker">FOCUSED READING</span>
+            <h3>Live &amp; conversational</h3>
+            <div class="price">$80 <small>/ 30 minutes</small></div>
+            <p>Therry generates the chart for the appointment and explores the question or theme with you in real time.</p>
+          </article>
+          <article class="card featured">
+            <span class="kicker">IN-DEPTH PREPARED</span>
+            <h3>Prepared before you meet</h3>
+            <div class="price">$160 <small>/ 45 minutes</small></div>
+            <p>Includes about 30 minutes of private chart analysis before your appointment, followed by a deeper consultation.</p>
+          </article>
+          <article class="card">
+            <span class="kicker">EXTRA TIME</span>
+            <h3>Keep exploring</h3>
+            <div class="price">$40 <small>/ additional 15 minutes</small></div>
+            <p>Add a simple extension when a focused reading needs a little more room.</p>
+          </article>
+        </div>
+
+        <div class="service-menu" aria-label="Reading options">
+          <div class="service-row"><div class="num">01</div><div><strong>Birth Chart — Who Am I?</strong><span>Best suited to a prepared, in-depth reading.</span></div><div class="pillset"><span class="pill deep">$160 · prepared</span></div></div>
+          <div class="service-row"><div class="num">02</div><div><strong>Current Transits</strong><span>A focused question or a deeper natal-chart + transit review.</span></div><div class="pillset"><span class="pill">$80 · focused</span><span class="pill deep">$160 · prepared</span></div></div>
+          <div class="service-row"><div class="num">03</div><div><strong>Relationship &amp; Synastry</strong><span>Choose a focused relationship question or a fuller two-chart analysis.</span></div><div class="pillset"><span class="pill">$80 · focused</span><span class="pill deep">$160 · prepared</span></div></div>
+          <div class="service-row"><div class="num">04</div><div><strong>Birthday / Solar Return</strong><span>A focused look at the themes of your new astrological year.</span></div><div class="pillset"><span class="pill">$80 · 30 min</span><span class="pill">+ $40 · 15 min</span></div></div>
+          <div class="service-row"><div class="num">05</div><div><strong>Purpose &amp; Direction</strong><span>A live exploration of meaning, gifts, motivation, and direction.</span></div><div class="pillset"><span class="pill">$80 · 30 min</span><span class="pill">+ $40 · 15 min</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section availability" id="availability">
+      <div class="shell availability-grid">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow" style="color:var(--gold2)">FLEXIBLE AVAILABILITY</p>
+            <h2>Therry opens the times that actually work.</h2>
+            <p>Rather than forcing a fixed weekly schedule, the booking calendar will show only the blocks Therry has opened around her nursing schedule.</p>
+          </div>
+          <div class="rules">
+            <div class="rule"><strong>48-hour booking window</strong><span>Private readings must be booked at least 48 hours in advance.</span></div>
+            <div class="rule"><strong>15-minute reset between clients</strong><span>Each live appointment will have breathing room built in before the next person.</span></div>
+            <div class="rule"><strong>Your reminder preference</strong><span>At booking, clients will be able to choose email reminders, text reminders, or both.</span></div>
+          </div>
+        </div>
+
+        <div class="calendar-shell">
+          <span class="kicker">BOOKING CALENDAR</span>
+          <h3>Choose from Therry's open blocks</h3>
+          <p>The live calendar will sit here once Sweet Tea Astrology's scheduling and payment accounts are connected.</p>
+          <div class="calendar-placeholder">
+            <strong>Calendar integration ready</strong>
+            <span>No private times are being invented or published. Therry will control exactly which appointment blocks appear here.</span>
+          </div>
+          <div class="reminder-choices" aria-label="Planned reminder choices">
+            <div class="choice"><strong>Email</strong><small>confirmation + reminders</small></div>
+            <div class="choice"><strong>Text</strong><small>confirmation + reminders</small></div>
+            <div class="choice"><strong>Both</strong><small>client chooses what works</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="circle" id="circle">
+      <div class="shell circle-grid">
+        <div>
+          <span class="status">First online class planned</span>
+          <p class="eyebrow" style="margin-top:22px">SWEET TEA ASTROLOGY CIRCLE</p>
+          <h2>Follow the zodiac seasons <em>together.</em></h2>
+          <p>Each monthly class is timed around the change of zodiac signs—usually around the 20th to 22nd of the month. Therry teaches a short topic, then the group plays with charts, asks questions, and talks astrology together.</p>
+          <p>Classes are planned for one hour. When the group is lively or larger, please allow up to 15 extra minutes.</p>
+        </div>
+
+        <article class="event-card">
+          <span class="kicker" style="color:var(--gold)">NEXT ONLINE CLASS</span>
+          <div class="date">Saturday · November 21, 2026<br>1:00–2:00 PM</div>
+          <div class="topic">Sagittarius Season: Finding Joy in the Holidays ♐️🌟</div>
+          <div class="price" style="color:var(--gold)">$30 <small style="color:rgba(255,255,255,.52)">per person</small></div>
+          <div class="event-meta">
+            <div>✦ Live online class via Therry's Zoom Pro account</div>
+            <div>✦ Plan for 60 minutes; allow up to 75 minutes if discussion runs long</div>
+            <div>✦ Confirmation when registered</div>
+            <div>✦ Automated reminders planned for 3 days before, 24 hours before, and shortly before class</div>
+          </div>
+          <div style="margin-top:24px">
+            <span class="button disabled" aria-disabled="true">Registration opens after secure payment is connected</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="written">
+      <div class="shell written-box">
+        <div>
+          <p class="eyebrow" style="color:var(--gold2)">ANOTHER WAY TO RECEIVE A READING</p>
+          <h2>Written / readable readings are coming.</h2>
+          <p>Therry would also like to offer an all-text option for people who prefer to read their interpretation rather than schedule a live appointment. The exact format, turnaround time, and price are still being finalized before this option opens.</p>
+        </div>
+        <span class="status" style="color:var(--plum);border-color:rgba(52,21,65,.16);background:var(--cream)">In development</span>
+      </div>
+    </section>
+
+    <section class="policy" id="policy">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow" style="color:var(--gold2)">BOOKING POLICIES</p>
+          <h2>Clear expectations, with room for real life.</h2>
+        </div>
+        <div class="policy-grid">
+          <article class="policy-card">
+            <h3>Cancellations &amp; refunds</h3>
+            <p>Please provide at least 24 hours' notice to cancel. Cancellations made with less than 24 hours' notice are non-refundable.</p>
+          </article>
+          <article class="policy-card">
+            <h3>Rescheduling</h3>
+            <p>Appointments may be rescheduled with at least 24 hours' notice. Genuine emergencies may be handled differently at Therry's discretion.</p>
+          </article>
+          <article class="policy-card">
+            <h3>Class recordings</h3>
+            <p>Recording and any future replay or YouTube policy are still being finalized. No public-use promise is being made at this stage.</p>
+          </article>
+          <article class="policy-card">
+            <h3>Secure payment</h3>
+            <p>Checkout will open only after Sweet Tea Astrology's own payment account is connected. No GaiaLab or unrelated business payment account is used here.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <strong>Sweet Tea Astrology</strong>
+      <span>Light, love &amp; a little cosmic perspective.</span>
+    </div>
+  </footer>
+</body>
+</html>
