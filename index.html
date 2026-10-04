@@ -89,6 +89,10 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.69); font-size: 18px; line-height: 1.75; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.44); font-family: var(--serif); font-style: italic; font-size: 14px; }
+.sit-spell { margin-top: 28px; display: inline-flex; align-items: center; gap: 15px; padding: 13px 17px 13px 13px; border: 1px solid rgba(242,199,119,.22); border-radius: 999px; background: rgba(255,255,255,.035); backdrop-filter: blur(10px); color: rgba(255,253,248,.78); font-family: var(--serif); font-size: 16px; font-style: italic; }
+.tea-glass { position: relative; width: 34px; height: 42px; flex: 0 0 auto; border: 1.5px solid rgba(242,199,119,.72); border-radius: 5px 5px 9px 9px; overflow: visible; }
+.tea-glass::before { content:""; position:absolute; left:4px; right:4px; bottom:4px; height:24px; border-radius:3px 3px 6px 6px; background:linear-gradient(180deg,rgba(242,199,119,.45),rgba(184,98,51,.72)); }
+.tea-glass::after { content:""; position:absolute; width:2px; height:30px; background:var(--gold); right:1px; top:-12px; transform:rotate(9deg); transform-origin:bottom; box-shadow:0 0 9px rgba(242,199,119,.25); }
 .tiny-star { color: var(--gold); font-style: normal; }
 .hero-visual { position: relative; min-height: 600px; display: grid; place-items: center; }
 .logo-stage { position: relative; width: min(88%, 520px); aspect-ratio: 1; display: grid; place-items: center; }
@@ -366,6 +370,10 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
             <span class="tiny-star" aria-hidden="true">✦</span>
             <span>Light, love, and a little cosmic perspective.</span>
           </div>
+          <div class="sit-spell" aria-label="Sweet Tea Astrology welcome">
+            <span class="tea-glass" aria-hidden="true"></span>
+            <span>Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
+          </div>
         </div>
 
         <div class="hero-visual reveal delay-1">
@@ -498,7 +506,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
         <div class="reveal delay-1" style="padding:34px;border-radius:28px;background:linear-gradient(145deg,#17142f,#31173c);color:var(--white);box-shadow:var(--shadow)">
           <p class="mini-label">STARTING PRICE</p>
           <div style="font:58px/1 var(--serif);color:var(--gold);margin:12px 0 18px">$30 <span style="font:12px var(--sans);color:rgba(255,255,255,.52)">per person</span></div>
-          <p style="margin:0;color:rgba(255,255,255,.62);font-size:14px;line-height:1.7">Registration, payment, confirmation, reminders, and Zoom access will be connected as the class schedule is finalized.</p>
+          <p style="margin:0;color:rgba(255,255,255,.62);font-size:14px;line-height:1.7">The first online circle is planned for November 21 and will be intentionally small—12 seats—so there is room for real conversation and chart exploration.</p>
         </div>
       </div>
     </section>
