@@ -89,10 +89,11 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.69); font-size: 18px; line-height: 1.75; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.44); font-family: var(--serif); font-style: italic; font-size: 14px; }
-.sit-spell { margin-top: 28px; display: inline-flex; align-items: center; gap: 15px; padding: 13px 17px 13px 13px; border: 1px solid rgba(242,199,119,.22); border-radius: 999px; background: rgba(255,255,255,.035); backdrop-filter: blur(10px); color: rgba(255,253,248,.78); font-family: var(--serif); font-size: 16px; font-style: italic; }
-.tea-glass { position: relative; width: 34px; height: 42px; flex: 0 0 auto; border: 1.5px solid rgba(242,199,119,.72); border-radius: 5px 5px 9px 9px; overflow: visible; }
-.tea-glass::before { content:""; position:absolute; left:4px; right:4px; bottom:4px; height:24px; border-radius:3px 3px 6px 6px; background:linear-gradient(180deg,rgba(242,199,119,.45),rgba(184,98,51,.72)); }
-.tea-glass::after { content:""; position:absolute; width:2px; height:30px; background:var(--gold); right:1px; top:-12px; transform:rotate(9deg); transform-origin:bottom; box-shadow:0 0 9px rgba(242,199,119,.25); }
+.sit-spell { margin-top: 28px; display: inline-flex; align-items: center; gap: 14px; padding: 10px 18px 10px 10px; border: 1px solid rgba(242,199,119,.22); border-radius: 999px; background: rgba(255,255,255,.035); backdrop-filter: blur(10px); color: rgba(255,253,248,.78); font-family: var(--serif); font-size: 16px; font-style: italic; }
+.tea-pair { position: relative; width: 62px; height: 54px; flex: 0 0 auto; }
+.tea-pair img { position: absolute; width: 49px; height: 49px; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 4px 10px rgba(0,0,0,.22)); }
+.tea-pair img:first-child { left: -2px; bottom: 0; transform: rotate(-5deg); }
+.tea-pair img:last-child { right: -2px; bottom: 1px; transform: rotate(5deg); }
 .tiny-star { color: var(--gold); font-style: normal; }
 .hero-visual { position: relative; min-height: 600px; display: grid; place-items: center; }
 .logo-stage { position: relative; width: min(88%, 520px); aspect-ratio: 1; display: grid; place-items: center; }
@@ -371,7 +372,10 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
             <span>Light, love, and a little cosmic perspective.</span>
           </div>
           <div class="sit-spell" aria-label="Sweet Tea Astrology welcome">
-            <span class="tea-glass" aria-hidden="true"></span>
+            <span class="tea-pair" aria-hidden="true">
+              <img src="assets/sweet-tea-glass.webp" alt="" width="49" height="49" />
+              <img src="assets/sweet-tea-glass.webp" alt="" width="49" height="49" />
+            </span>
             <span>Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
           </div>
         </div>
