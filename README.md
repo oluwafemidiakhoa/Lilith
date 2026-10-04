@@ -1,29 +1,30 @@
-# Sweet Tea Astrology — First Production Mockup
+# Sweet Tea Astrology
 
-A polished, responsive, Vercel-ready first website mockup for **Sweet Tea Astrology**.
+Production-prep website for **Sweet Tea Astrology**, built as a deliberately small static site on Vercel.
 
-## Included
+## Current architecture
 
-- Premium celestial brand direction using the approved Sweet Tea Astrology identity
-- Responsive desktop and mobile layouts
-- Accessible navigation and focus states
-- Reading categories without invented prices or session lengths
-- Black Moon Lilith educational guide feature
-- Social/video content direction for TikTok, YouTube, and Instagram
-- About Therry area ready for her approved portrait and biography
-- Booking section ready for calendar/payment integration
-- Basic service disclaimer
-- Privacy-friendly security headers for Vercel
-- Search indexing disabled during the mockup stage
+The website itself is static HTML/CSS/JavaScript. Customer-facing operations are intended to use managed providers rather than a custom application backend:
 
-## Preview locally
+**Website → managed scheduler → Sweet Tea Astrology payment account → Therry's calendar/Zoom → transactional reminders**
 
-Open `index.html` directly in a modern browser.
+This keeps the system inexpensive, inspectable, and easier to maintain.
 
-You can also serve the folder with any static web server.
+## Current pages
 
-## Deploy to Vercel
+- `index.html` — homepage
+- `services.html` — readings and pricing
+- `booking.html` — booking plan, first class, and policies
+- `about.html` — Therry's story
+- `privacy.html` — customer data practices
+- `policies.html` — booking and class policies
 
-Import this GitHub repository into Vercel. It is a static site and does not require a build command.
+## Safety state
 
-Before public launch, remove the `noindex` meta tag and update `robots.txt` after the final business content is approved.
+- Search indexing is intentionally disabled during development.
+- Checkout is intentionally disabled until Sweet Tea Astrology's own payment account is connected.
+- No custom customer database, payment backend, SMS service, or Zoom automation is currently running.
+- Security headers are configured in `vercel.json`.
+- `.github/workflows/site-checks.yml` validates local links, required files, stale copy, and common secret patterns.
+
+See `LAUNCH_CHECKLIST.md` before enabling payments or public search indexing.
