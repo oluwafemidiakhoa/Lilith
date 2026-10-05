@@ -160,13 +160,13 @@ Stateful/privileged components currently active: **none in the application itsel
 
 | ID | Severity | Status | Evidence | Change | Tests | Staging | Rollback | Production |
 |---|---|---|---|---|---|---|---|---|
-| REL-01 | HIGH | open | main unprotected; no rulesets; failing CI + READY prod deploys | none yet | pending | pending | repo rule reversal | untouched |
-| CI-01 | MEDIUM | open | checker scans its own stale literals | none yet | pending | pending | revert checker | untouched |
-| QA-01 | MEDIUM | open | single narrow checker only | none yet | pending | pending | revert validations | untouched |
+| REL-01 | HIGH | open | main unprotected; no rulesets; production auto-deploys from main | none; blocked by missing repo-admin permission | CI now green on hardening PR | preview READY; protected preview could not be browser-smoked due Vercel connector scope | repo rule reversal | untouched |
+| CI-01 | MEDIUM | verified | checker scanned its own stale literals | checker now excludes itself from stale/secret scans and scopes stale-copy checks to HTML | GitHub Site checks SUCCESS on PR run 37312376441 | preview deployment READY | revert checker commit | untouched |
+| QA-01 | MEDIUM | verified | original checker covered only links/noindex/basic patterns | added duplicate-id, image metadata, target=_blank, inline-handler, path-escape and security-header/CSP checks | GitHub Site checks SUCCESS on PR run 37312376441 | preview deployment READY | revert validation commit | untouched |
 | PERF-01 | MEDIUM | deferred | 2.25 MB + 2.35 MB PNGs in live pages | none | pending | pending | restore refs | untouched |
 | OPS-01 | LOW/UNKNOWN | deferred | Vercel observability endpoints 403 | none | n/a | n/a | n/a | untouched |
 | DEBT-01 | LOW | deferred | unused hero CSS/assets | none | pending | pending | revert cleanup | untouched |
 
 ## Final Decision
 
-The current application is comparatively safe because it is a static, non-transactional site with strong data minimization. It is **not yet release-hardened**: the current production path accepts direct `main` changes even while CI is red. The first remediation tranche must restore trustworthy CI and validate it in a non-production branch/PR. Production must remain unchanged until the repository gate is explicit and verified.
+The current application is comparatively safe because it is a static, non-transactional site with strong data minimization. It is **not yet release-hardened**: the current production path accepts direct `main` changes even while CI is red. The first remediation tranche restored trustworthy CI on a non-production branch and verified it in draft PR #1. Production remains unchanged. The next production gate is repository administration: require PRs plus the green Site checks status on `main` before any future production merge.
