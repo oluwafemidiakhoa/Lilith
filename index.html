@@ -89,19 +89,28 @@ button { font: inherit; }
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.68) 0%, rgba(6,9,24,.40) 27%, rgba(6,9,24,.10) 40%, rgba(6,9,24,.02) 47%, transparent 52%);
+    linear-gradient(90deg,
+      rgba(6,9,24,.98) 0%,
+      rgba(6,9,24,.94) 24%,
+      rgba(6,9,24,.72) 31%,
+      rgba(6,9,24,.34) 38%,
+      rgba(6,9,24,.10) 44%,
+      rgba(6,9,24,.02) 49%,
+      transparent 54%);
 }
 .hero-scene {
   position: absolute;
   top: 84px;
   right: 0;
   bottom: 58px;
-  width: 54%;
+  width: 68%;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: url("assets/hero-porch-background.webp") center center / cover no-repeat;
-  filter: brightness(1.05) saturate(1.05) contrast(1.02);
+  background: url("assets/hero-porch-background.webp") 58% center / cover no-repeat;
+  filter: brightness(1.04) saturate(1.05) contrast(1.02);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.16) 7%, rgba(0,0,0,.62) 15%, #000 25%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.16) 7%, rgba(0,0,0,.62) 15%, #000 25%, #000 100%);
 }
 .hero-scene::after {
   content: "";
@@ -109,8 +118,8 @@ button { font: inherit; }
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.30) 0%, rgba(6,9,24,.08) 12%, rgba(6,9,24,.015) 20%, transparent 28%),
-    linear-gradient(180deg, transparent 80%, rgba(6,9,24,.07) 100%);
+    linear-gradient(90deg, rgba(6,9,24,.16) 0%, rgba(6,9,24,.04) 14%, transparent 24%),
+    linear-gradient(180deg, transparent 82%, rgba(6,9,24,.06) 100%);
 }
 .stars { position: absolute; inset: 0; opacity: .45; pointer-events: none; }
 .stars-one { background-image: radial-gradient(#fff 0 1px, transparent 1.3px); background-size: 109px 109px; background-position: 16px 29px; mask-image: linear-gradient(to bottom, #000, transparent 90%); }
@@ -122,7 +131,8 @@ button { font: inherit; }
 .hero-copy { width: 100%; max-width: 460px; padding-right: 0; }
 .hero-title { width: 100%; max-width: 460px; }
 .hero-title-line { display: block; white-space: nowrap; }
-.hero-title-accent { display:block; max-width:440px; margin-top:14px; color:var(--gold); font-size:.50em; line-height:1.04; letter-spacing:-.026em; font-style:italic; }
+.hero-title-accent { display:block; max-width:440px; margin-top:14px; color:var(--gold); font-size:.47em; line-height:1.04; letter-spacing:-.026em; font-style:italic; }
+.hero-star-group { white-space: nowrap; }
 .hero-star { display:inline-block; font-size:.72em; margin-left:.08em; transform:translateY(-.04em); }
 .hero-brandline { margin-top: 20px; color: rgba(255,253,248,.66); font-family: var(--serif); font-size: 15px; line-height: 1.5; font-style: italic; }
 .eyebrow { margin: 0 0 24px; color: var(--gold); font-size: 11px; font-weight: 850; letter-spacing: .24em; text-transform: uppercase; }
@@ -305,7 +315,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .mobile-menu .button { margin-top: 10px; }
   .hero-grid { grid-template-columns: 1fr; padding-bottom: 80px; }
   .hero-copy { max-width: 460px; }
-  .hero-scene { width: 50%; }
+  .hero-scene { width: 64%; }
   .hero-visual { min-height: 520px; }
   .logo-stage { width: min(70vw, 520px); }
   .philosophy-grid { grid-template-columns: 80px 1fr; }
@@ -331,7 +341,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .hero-grid { min-height: auto; gap: 24px; padding-bottom: 42px; }
   .hero-copy { max-width: 620px; padding-right: 0; }
   h1 { font-size: clamp(46px, 12.5vw, 62px); }
-  .hero-title-accent { font-size:.46em; margin-top:12px; }
+  .hero-title-accent { font-size:.44em; margin-top:12px; }
   .hero-lede { font-size: 16px; max-width: 520px; }
   .hero-brandline { font-size:14px; max-width:520px; }
   .hero-visual { min-height: 420px; }
@@ -393,6 +403,8 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
     margin-top: 6px;
     background-position: 56% center;
     filter: brightness(1.03) saturate(1.04) contrast(1.01);
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .hero-scene::after {
     background:
@@ -449,7 +461,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
       <div class="hero-grid shell">
         <div class="hero-copy reveal">
           <p class="eyebrow">ASTROLOGY FOR REAL LIFE</p>
-          <h1 class="hero-title"><span class="hero-title-line">Come and sit</span><span class="hero-title-line">for a spell.</span><em class="hero-title-accent">Let’s talk about the stars. <span class="hero-star" aria-hidden="true">★</span></em></h1>
+          <h1 class="hero-title"><span class="hero-title-line">Come and sit</span><span class="hero-title-line">for a spell.</span><em class="hero-title-accent">Let’s talk about the <span class="hero-star-group">stars. <span class="hero-star" aria-hidden="true">★</span></span></em></h1>
           <p class="hero-lede">
             A welcoming place to explore your birth chart, understand the people you love,
             and make space for deeper self-knowledge.
