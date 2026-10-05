@@ -75,16 +75,12 @@ button { font: inherit; }
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0 0 0 auto;
-  width: 66%;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.54) 0%, rgba(6,9,24,.14) 20%, rgba(6,9,24,.02) 42%, transparent 58%),
-    url("assets/hero-porch-background.webp") center 48% / cover no-repeat;
-  filter: brightness(1.16) saturate(1.12) contrast(1.03);
-  transform: scale(1.006);
-  transform-origin: center right;
+    radial-gradient(circle at 14% 26%, rgba(242,199,119,.07), transparent 26%),
+    radial-gradient(circle at 72% 18%, rgba(125,76,148,.10), transparent 28%);
 }
 .hero::after {
   content: "";
@@ -93,8 +89,28 @@ button { font: inherit; }
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.99) 0%, rgba(6,9,24,.94) 27%, rgba(6,9,24,.48) 40%, rgba(6,9,24,.10) 52%, transparent 63%),
-    linear-gradient(180deg, rgba(4,5,14,.06) 0%, transparent 67%, rgba(4,5,14,.28) 100%);
+    linear-gradient(90deg, rgba(6,9,24,.58) 0%, rgba(6,9,24,.30) 30%, rgba(6,9,24,.08) 45%, transparent 54%);
+}
+.hero-scene {
+  position: absolute;
+  top: 84px;
+  right: 0;
+  bottom: 58px;
+  width: 59%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: url("assets/hero-porch-background.webp") center 48% / cover no-repeat;
+  filter: brightness(1.20) saturate(1.16) contrast(1.05);
+}
+.hero-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6,9,24,.58) 0%, rgba(6,9,24,.16) 15%, rgba(6,9,24,.02) 29%, transparent 42%),
+    linear-gradient(180deg, rgba(6,9,24,.02) 0%, transparent 76%, rgba(6,9,24,.16) 100%);
 }
 .stars { position: absolute; inset: 0; opacity: .45; pointer-events: none; }
 .stars-one { background-image: radial-gradient(#fff 0 1px, transparent 1.3px); background-size: 109px 109px; background-position: 16px 29px; mask-image: linear-gradient(to bottom, #000, transparent 90%); }
@@ -102,8 +118,8 @@ button { font: inherit; }
 .hero-orbit { position: absolute; border: 1px solid rgba(242,199,119,.15); border-radius: 50%; pointer-events: none; }
 .orbit-a { width: 760px; height: 760px; right: -180px; top: -240px; }
 .orbit-b { width: 1030px; height: 1030px; right: -300px; top: -360px; opacity: .5; }
-.hero-grid { min-height: calc(100svh - 150px); padding-bottom: 120px; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(44px, 7vw, 96px); position: relative; z-index: 2; }
-.hero-copy { max-width: 660px; padding-right: 8px; }
+.hero-grid { min-height: calc(100svh - 150px); padding-bottom: 120px; display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(44px, 6vw, 88px); position: relative; z-index: 2; }
+.hero-copy { max-width: 620px; padding-right: 20px; }
 .hero-title { max-width: 650px; }
 .hero-title-accent { display:block; margin-top:14px; color:var(--gold); font-size:.52em; line-height:1.03; letter-spacing:-.026em; font-style:italic; }
 .hero-star { display:inline-block; font-size:.72em; margin-left:.08em; transform:translateY(-.04em); }
@@ -310,7 +326,8 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .mobile-menu { top: 74px; }
   .brand-name { font-size: 17px; }
   .hero { padding-top: 108px; }
-  .hero-grid { min-height: auto; gap: 28px; padding-bottom: 72px; }
+  .hero-grid { min-height: auto; gap: 24px; padding-bottom: 42px; }
+  .hero-copy { max-width: 620px; padding-right: 0; }
   h1 { font-size: clamp(50px, 13.8vw, 72px); }
   .hero-title-accent { font-size:.46em; margin-top:12px; }
   .hero-lede { font-size: 16px; max-width: 520px; }
@@ -360,16 +377,25 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
 
 @media (max-width: 760px) {
-  .hero::before {
-    width: 100%;
-    opacity: .68;
-    background-position: 60% center;
-    filter: brightness(1.10) saturate(1.08) contrast(1.02);
-  }
   .hero::after {
     background:
-      linear-gradient(180deg, rgba(6,9,24,.48) 0%, rgba(6,9,24,.56) 38%, rgba(6,9,24,.88) 88%),
-      linear-gradient(90deg, rgba(6,9,24,.80) 0%, rgba(6,9,24,.26) 58%, rgba(6,9,24,.06) 100%);
+      linear-gradient(180deg, rgba(6,9,24,.10) 0%, rgba(6,9,24,.04) 55%, transparent 100%);
+  }
+  .hero-scene {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: clamp(360px, 72vw, 520px);
+    margin-top: 6px;
+    background-position: 58% center;
+    filter: brightness(1.18) saturate(1.14) contrast(1.04);
+  }
+  .hero-scene::after {
+    background:
+      linear-gradient(180deg, rgba(6,9,24,.03) 0%, transparent 72%, rgba(6,9,24,.18) 100%),
+      linear-gradient(90deg, rgba(6,9,24,.12) 0%, transparent 18%, transparent 100%);
   }
 }
 </style>
@@ -434,6 +460,8 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
         </div>
 
       </div>
+
+      <div class="hero-scene" role="img" aria-label="A warm moonlit porch with two chairs and two glasses of sweet tea under a starry sky"></div>
 
       <div class="hero-marquee" aria-label="Sweet Tea Astrology values">
         <div class="marquee-track">
