@@ -89,19 +89,19 @@ button { font: inherit; }
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.58) 0%, rgba(6,9,24,.30) 30%, rgba(6,9,24,.08) 45%, transparent 54%);
+    linear-gradient(90deg, rgba(6,9,24,.68) 0%, rgba(6,9,24,.40) 27%, rgba(6,9,24,.10) 40%, rgba(6,9,24,.02) 47%, transparent 52%);
 }
 .hero-scene {
   position: absolute;
   top: 84px;
   right: 0;
   bottom: 58px;
-  width: 59%;
+  width: 62%;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: url("assets/hero-porch-background.webp") center 48% / cover no-repeat;
-  filter: brightness(1.20) saturate(1.16) contrast(1.05);
+  background: url("assets/hero-porch-background.webp") center center / cover no-repeat;
+  filter: brightness(1.05) saturate(1.05) contrast(1.02);
 }
 .hero-scene::after {
   content: "";
@@ -109,8 +109,8 @@ button { font: inherit; }
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.58) 0%, rgba(6,9,24,.16) 15%, rgba(6,9,24,.02) 29%, transparent 42%),
-    linear-gradient(180deg, rgba(6,9,24,.02) 0%, transparent 76%, rgba(6,9,24,.16) 100%);
+    linear-gradient(90deg, rgba(6,9,24,.30) 0%, rgba(6,9,24,.08) 12%, rgba(6,9,24,.015) 20%, transparent 28%),
+    linear-gradient(180deg, transparent 80%, rgba(6,9,24,.07) 100%);
 }
 .stars { position: absolute; inset: 0; opacity: .45; pointer-events: none; }
 .stars-one { background-image: radial-gradient(#fff 0 1px, transparent 1.3px); background-size: 109px 109px; background-position: 16px 29px; mask-image: linear-gradient(to bottom, #000, transparent 90%); }
@@ -174,7 +174,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .floating-card small { color: rgba(255,255,255,.52); font-size: 9px; text-transform: uppercase; letter-spacing: .12em; }
 .floating-card-top { top: 13%; left: -3%; }
 .floating-card-bottom { bottom: 12%; right: -2%; }
-.hero-marquee { position: relative; z-index: 3; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); background: rgba(5,7,18,.72); }
+.hero-marquee { position: relative; z-index: 3; overflow: hidden; border-top: 1px solid rgba(242,199,119,.16); background: rgba(5,7,18,.94); box-shadow: 0 -14px 34px rgba(5,7,18,.24); }
 .marquee-track { width: max-content; display: flex; align-items: center; gap: 28px; min-height: 58px; color: rgba(255,255,255,.58); font-size: 10px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; animation: marquee 28s linear infinite; }
 .marquee-track b { color: var(--gold); font-size: 8px; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -379,7 +379,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 @media (max-width: 760px) {
   .hero::after {
     background:
-      linear-gradient(180deg, rgba(6,9,24,.10) 0%, rgba(6,9,24,.04) 55%, transparent 100%);
+      linear-gradient(180deg, rgba(6,9,24,.05) 0%, rgba(6,9,24,.015) 55%, transparent 100%);
   }
   .hero-scene {
     position: relative;
@@ -389,13 +389,13 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
     width: 100%;
     height: clamp(360px, 72vw, 520px);
     margin-top: 6px;
-    background-position: 58% center;
-    filter: brightness(1.18) saturate(1.14) contrast(1.04);
+    background-position: 56% center;
+    filter: brightness(1.03) saturate(1.04) contrast(1.01);
   }
   .hero-scene::after {
     background:
-      linear-gradient(180deg, rgba(6,9,24,.03) 0%, transparent 72%, rgba(6,9,24,.18) 100%),
-      linear-gradient(90deg, rgba(6,9,24,.12) 0%, transparent 18%, transparent 100%);
+      linear-gradient(180deg, transparent 78%, rgba(6,9,24,.07) 100%),
+      linear-gradient(90deg, rgba(6,9,24,.06) 0%, transparent 14%, transparent 100%);
   }
 }
 </style>
