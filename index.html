@@ -102,7 +102,7 @@ button { font: inherit; }
   position: absolute;
   top: 84px;
   right: 0;
-  bottom: 58px;
+  bottom: 136px;
   width: 68%;
   z-index: 0;
   overflow: hidden;
@@ -142,6 +142,20 @@ h1 { font-size: clamp(56px, 4.8vw, 78px); line-height: .91; letter-spacing: -.04
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-lede { max-width: 590px; margin: 25px 0 0; color: rgba(255,253,248,.88); font-size: 17px; line-height: 1.7; text-shadow: 0 2px 18px rgba(0,0,0,.2); }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+.hero-action-dock {
+  position: absolute;
+  right: clamp(24px, 4vw, 64px);
+  bottom: 68px;
+  width: min(50%, 620px);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-action-dock .hero-buttons {
+  margin-top: 0;
+  justify-content: center;
+}
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.62); font-family: var(--serif); font-style: italic; font-size: 14px; }
 .sit-spell { margin-top: 28px; display: inline-grid; grid-template-columns: 116px minmax(0,1fr); align-items: center; gap: 18px; max-width: 530px; padding: 11px 22px 11px 12px; border: 1px solid rgba(242,199,119,.42); border-radius: 28px; background: linear-gradient(135deg,rgba(255,250,240,.98),rgba(243,226,197,.97)); color: #3a2042; font-family: var(--serif); font-size: 17px; line-height: 1.45; font-style: italic; box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.52); }
 .tea-pair { position: relative; width: 112px; height: 78px; flex: 0 0 auto; isolation: isolate; }
@@ -316,6 +330,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .hero-grid { grid-template-columns: 1fr; padding-bottom: 80px; }
   .hero-copy { max-width: 460px; }
   .hero-scene { width: 64%; }
+  .hero-action-dock { width: min(52%, 560px); }
   .hero-visual { min-height: 520px; }
   .logo-stage { width: min(70vw, 520px); }
   .philosophy-grid { grid-template-columns: 80px 1fr; }
@@ -406,6 +421,14 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
     -webkit-mask-image: none;
     mask-image: none;
   }
+  .hero-action-dock {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: var(--shell);
+    margin: 18px auto 0;
+    padding-bottom: 6px;
+  }
   .hero-scene::after {
     background:
       linear-gradient(180deg, transparent 78%, rgba(6,9,24,.07) 100%),
@@ -433,7 +456,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
       </nav>
 
       <div class="nav-actions">
-        <a class="button button-small button-gold desktop-book" href="booking.html">Book a reading</a>
+        <a class="button button-small button-gold desktop-book" href="booking.html">Book a consultation</a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
           <span></span><span></span>
           <span class="sr-only">Open menu</span>
@@ -447,7 +470,7 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
       <a href="#learn">Learn</a>
       <a href="about.html">About</a>
       <a href="#connect">Connect</a>
-      <a class="button button-gold" href="booking.html">Book a reading</a>
+      <a class="button button-gold" href="booking.html">Book a consultation</a>
     </div>
   </header>
 
@@ -466,16 +489,19 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
             A welcoming place to explore your birth chart, understand the people you love,
             and make space for deeper self-knowledge.
           </p>
-          <div class="hero-buttons">
-            <a class="button button-gold" href="booking.html">Book a reading <span aria-hidden="true">↗</span></a>
-            <a class="button button-ghost" href="#learn">Explore astrology</a>
-          </div>
           <p class="hero-brandline">Your chart. Your story. Served with a little sweetness.</p>
         </div>
 
       </div>
 
       <div class="hero-scene" role="img" aria-label="A warm moonlit porch with two chairs and two glasses of sweet tea under a starry sky"></div>
+
+      <div class="hero-action-dock" aria-label="Homepage actions">
+        <div class="hero-buttons">
+          <a class="button button-gold" href="booking.html">Book a consultation <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="#learn">Explore astrology</a>
+        </div>
+      </div>
 
       <div class="hero-marquee" aria-label="Sweet Tea Astrology values">
         <div class="marquee-track">
