@@ -76,12 +76,15 @@ button { font: inherit; }
   content: "";
   position: absolute;
   inset: 0 0 0 auto;
-  width: 62%;
+  width: 64%;
   z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.94) 0%, rgba(6,9,24,.42) 24%, rgba(6,9,24,.08) 52%, transparent 72%),
+    linear-gradient(90deg, rgba(6,9,24,.72) 0%, rgba(6,9,24,.22) 22%, rgba(6,9,24,.03) 48%, transparent 64%),
     url("assets/hero-porch-background.webp") center center / cover no-repeat;
+  filter: brightness(1.13) saturate(1.14) contrast(1.04);
+  transform: scale(1.006);
+  transform-origin: center right;
 }
 .hero::after {
   content: "";
@@ -90,8 +93,8 @@ button { font: inherit; }
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6,9,24,.98) 0%, rgba(6,9,24,.9) 31%, rgba(6,9,24,.38) 56%, rgba(6,9,24,.08) 78%),
-    linear-gradient(180deg, transparent 62%, rgba(4,5,14,.58));
+    linear-gradient(90deg, rgba(6,9,24,.98) 0%, rgba(6,9,24,.9) 29%, rgba(6,9,24,.20) 48%, rgba(6,9,24,.03) 60%, transparent 70%),
+    linear-gradient(180deg, transparent 72%, rgba(4,5,14,.34));
 }
 .stars { position: absolute; inset: 0; opacity: .45; pointer-events: none; }
 .stars-one { background-image: radial-gradient(#fff 0 1px, transparent 1.3px); background-size: 109px 109px; background-position: 16px 29px; mask-image: linear-gradient(to bottom, #000, transparent 90%); }
@@ -106,9 +109,9 @@ button { font: inherit; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
 h1 { font-size: clamp(58px, 6.3vw, 100px); line-height: .92; letter-spacing: -.055em; }
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
-.hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.69); font-size: 18px; line-height: 1.75; }
+.hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.84); font-size: 18px; line-height: 1.75; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
-.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.44); font-family: var(--serif); font-style: italic; font-size: 14px; }
+.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.62); font-family: var(--serif); font-style: italic; font-size: 14px; }
 .sit-spell { margin-top: 28px; display: inline-grid; grid-template-columns: 116px minmax(0,1fr); align-items: center; gap: 18px; max-width: 530px; padding: 11px 22px 11px 12px; border: 1px solid rgba(242,199,119,.42); border-radius: 28px; background: linear-gradient(135deg,rgba(255,250,240,.98),rgba(243,226,197,.97)); color: #3a2042; font-family: var(--serif); font-size: 17px; line-height: 1.45; font-style: italic; box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.52); }
 .tea-pair { position: relative; width: 112px; height: 78px; flex: 0 0 auto; isolation: isolate; }
 .tea-pair img { position: absolute; width: 76px; height: 76px; object-fit: contain; mix-blend-mode: multiply; filter: saturate(1.06) contrast(1.03) drop-shadow(0 6px 12px rgba(88,38,28,.14)); }
@@ -353,13 +356,14 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 @media (max-width: 760px) {
   .hero::before {
     width: 100%;
-    opacity: .42;
+    opacity: .62;
     background-position: 58% center;
+    filter: brightness(1.08) saturate(1.1) contrast(1.03);
   }
   .hero::after {
     background:
-      linear-gradient(180deg, rgba(6,9,24,.58) 0%, rgba(6,9,24,.74) 42%, rgba(6,9,24,.96) 86%),
-      linear-gradient(90deg, rgba(6,9,24,.74), rgba(6,9,24,.16));
+      linear-gradient(180deg, rgba(6,9,24,.48) 0%, rgba(6,9,24,.62) 42%, rgba(6,9,24,.88) 88%),
+      linear-gradient(90deg, rgba(6,9,24,.68), rgba(6,9,24,.08));
   }
 }
 </style>
