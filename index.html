@@ -72,7 +72,27 @@ button { font: inherit; }
   radial-gradient(circle at 16% 25%, rgba(242,199,119,.08), transparent 22%),
   linear-gradient(135deg, #060918 0%, #0d1029 50%, #180d2a 100%);
 }
-.hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 65%, rgba(4,5,14,.55)); }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 62%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6,9,24,.94) 0%, rgba(6,9,24,.42) 24%, rgba(6,9,24,.08) 52%, transparent 72%),
+    url("assets/hero-porch-background.webp") center center / cover no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6,9,24,.98) 0%, rgba(6,9,24,.9) 31%, rgba(6,9,24,.38) 56%, rgba(6,9,24,.08) 78%),
+    linear-gradient(180deg, transparent 62%, rgba(4,5,14,.58));
+}
 .stars { position: absolute; inset: 0; opacity: .45; pointer-events: none; }
 .stars-one { background-image: radial-gradient(#fff 0 1px, transparent 1.3px); background-size: 109px 109px; background-position: 16px 29px; mask-image: linear-gradient(to bottom, #000, transparent 90%); }
 .stars-two { background-image: radial-gradient(var(--gold) 0 1px, transparent 1.6px); background-size: 173px 173px; background-position: 90px 40px; opacity: .28; }
@@ -329,6 +349,19 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .quote-card p { font-size: 27px; }
 }
 
+
+@media (max-width: 760px) {
+  .hero::before {
+    width: 100%;
+    opacity: .42;
+    background-position: 58% center;
+  }
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgba(6,9,24,.58) 0%, rgba(6,9,24,.74) 42%, rgba(6,9,24,.96) 86%),
+      linear-gradient(90deg, rgba(6,9,24,.74), rgba(6,9,24,.16));
+  }
+}
 </style>
 </head>
 <body>
@@ -391,16 +424,8 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
             <span class="tiny-star" aria-hidden="true">✦</span>
             <span>Light, love, and a little cosmic perspective.</span>
           </div>
-          <div class="sit-spell" aria-label="Sweet Tea Astrology welcome">
-            <span class="tea-pair" aria-hidden="true">
-              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
-              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
-            </span>
-            <span class="sit-spell-copy">Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
-          </div>
         </div>
 
-        <div class="hero-visual hero-photo reveal delay-1" role="img" aria-label="A warm moonlit porch with two wicker chairs and two glasses of sweet tea ready for conversation"></div>
       </div>
 
       <div class="hero-marquee" aria-label="Sweet Tea Astrology values">
