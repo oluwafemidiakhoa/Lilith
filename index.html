@@ -79,29 +79,27 @@ button { font: inherit; }
 .hero-orbit { position: absolute; border: 1px solid rgba(242,199,119,.15); border-radius: 50%; pointer-events: none; }
 .orbit-a { width: 760px; height: 760px; right: -180px; top: -240px; }
 .orbit-b { width: 1030px; height: 1030px; right: -300px; top: -360px; opacity: .5; }
-.hero-grid { min-height: calc(100svh - 150px); padding-bottom: 120px; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(44px, 7vw, 96px); position: relative; z-index: 2; }
+.hero-grid { min-height: calc(100svh - 150px); padding: 118px 0 110px; display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(36px, 5vw, 72px); position: relative; z-index: 2; }
 .hero-copy { max-width: 700px; }
 .eyebrow { margin: 0 0 24px; color: var(--gold); font-size: 11px; font-weight: 850; letter-spacing: .24em; text-transform: uppercase; }
 .eyebrow-dark { color: var(--gold-2); }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
-h1 { font-size: clamp(58px, 6.3vw, 100px); line-height: .92; letter-spacing: -.055em; }
+h1 { font-size: clamp(58px, 5.8vw, 92px); line-height: .91; letter-spacing: -.052em; }
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
+.hero-title-accent { display:block; margin-top:14px; font-size:.56em; line-height:1.06; letter-spacing:-.025em; font-style:italic; }
 .hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.69); font-size: 18px; line-height: 1.75; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.44); font-family: var(--serif); font-style: italic; font-size: 14px; }
-.sit-spell { margin-top: 28px; display: inline-grid; grid-template-columns: 116px minmax(0,1fr); align-items: center; gap: 18px; max-width: 530px; padding: 11px 22px 11px 12px; border: 1px solid rgba(242,199,119,.42); border-radius: 28px; background: linear-gradient(135deg,rgba(255,250,240,.98),rgba(243,226,197,.97)); color: #3a2042; font-family: var(--serif); font-size: 17px; line-height: 1.45; font-style: italic; box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.52); }
-.tea-pair { position: relative; width: 112px; height: 78px; flex: 0 0 auto; isolation: isolate; }
-.tea-pair img { position: absolute; width: 76px; height: 76px; object-fit: contain; mix-blend-mode: multiply; filter: saturate(1.06) contrast(1.03) drop-shadow(0 6px 12px rgba(88,38,28,.14)); }
-.tea-pair img:first-child { left: 0; bottom: 0; transform: rotate(-7deg); z-index: 1; }
-.tea-pair img:last-child { right: 0; bottom: 0; transform: rotate(7deg); z-index: 2; }
-.sit-spell-copy { display:block; }
-@media (max-width: 520px) {
-  .sit-spell { grid-template-columns: 92px minmax(0,1fr); gap: 12px; width: 100%; padding: 10px 16px 10px 10px; border-radius: 24px; font-size: 15px; }
-  .tea-pair { width: 90px; height: 66px; }
-  .tea-pair img { width: 64px; height: 64px; }
-}
+.hero-features { display:flex; flex-wrap:wrap; gap:18px 26px; margin-top:30px; padding-top:24px; border-top:1px solid rgba(242,199,119,.14); }
+.hero-feature { display:flex; align-items:center; gap:10px; color:rgba(255,253,248,.7); font-size:12px; line-height:1.35; }
+.hero-feature .feature-glyph { color:var(--gold); font-family:var(--serif); font-size:24px; line-height:1; }
 .tiny-star { color: var(--gold); font-style: normal; }
 .hero-visual { position: relative; min-height: 600px; display: grid; place-items: center; }
+.porch-stage { position:relative; width:min(100%,680px); aspect-ratio: 4 / 3; overflow:hidden; border-radius:34px; border:1px solid rgba(242,199,119,.28); box-shadow:0 36px 100px rgba(0,0,0,.48),0 0 70px rgba(104,54,126,.16); background:#15142b; }
+.porch-stage::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,rgba(7,9,24,.22),transparent 32%),linear-gradient(180deg,transparent 65%,rgba(7,9,24,.18)); box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); }
+.porch-image { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+.porch-badge { position:absolute; z-index:3; left:22px; bottom:20px; display:flex; align-items:center; gap:10px; padding:11px 14px; border-radius:999px; border:1px solid rgba(242,199,119,.28); background:rgba(8,11,27,.72); backdrop-filter:blur(12px); color:rgba(255,253,248,.86); font-family:var(--serif); font-size:14px; }
+.porch-badge span:first-child { color:var(--gold); }
 .logo-stage { position: relative; width: min(88%, 520px); aspect-ratio: 1; display: grid; place-items: center; }
 .logo-stage::before { content: ""; position: absolute; inset: -14%; border: 1px solid rgba(242,199,119,.18); border-radius: 50%; transform: rotate(-12deg); }
 .logo-stage::after { content: ""; position: absolute; inset: -24%; border: 1px solid rgba(242,199,119,.08); border-radius: 50%; }
@@ -245,10 +243,10 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .mobile-menu:not([hidden]) { display: grid; gap: 6px; }
   .mobile-menu > a:not(.button) { padding: 14px 10px; border-bottom: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.76); }
   .mobile-menu .button { margin-top: 10px; }
-  .hero-grid { grid-template-columns: 1fr; padding-bottom: 80px; }
+  .hero-grid { grid-template-columns: 1fr; padding: 112px 0 80px; }
   .hero-copy { max-width: 780px; }
-  .hero-visual { min-height: 520px; }
-  .logo-stage { width: min(70vw, 520px); }
+  .hero-visual { min-height: 500px; }
+  .porch-stage { width:min(90vw,680px); }
   .philosophy-grid { grid-template-columns: 80px 1fr; }
   .philosophy-body { grid-column: 2; padding-top: 0; }
   .process-grid { grid-template-columns: 1fr; }
@@ -269,12 +267,12 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .mobile-menu { top: 74px; }
   .brand-name { font-size: 17px; }
   .hero { padding-top: 116px; }
-  .hero-grid { min-height: auto; gap: 36px; }
+  .hero-grid { min-height: auto; gap: 34px; padding:100px 0 72px; }
   h1 { font-size: clamp(53px, 14.5vw, 76px); }
   .hero-lede { font-size: 16px; }
-  .hero-visual { min-height: 420px; }
-  .logo-stage { width: min(84vw, 440px); }
-  .floating-card { display: none; }
+  .hero-visual { min-height: auto; }
+  .porch-stage { width:100%; border-radius:26px; aspect-ratio: 4 / 3; }
+  .porch-badge { left:14px; right:14px; bottom:14px; justify-content:center; text-align:center; font-size:12px; }
   .hero-orbit { opacity: .5; }
   .marquee-track { min-height: 52px; }
   .philosophy, .readings, .process, .learning, .social, .about { padding: 82px 0; }
@@ -363,8 +361,8 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
       <div class="hero-grid shell">
         <div class="hero-copy reveal">
-          <p class="eyebrow">ASTROLOGY WITH WARMTH, WONDER & CLARITY</p>
-          <h1>Your chart.<br>Your story.<br><em>Served with a little sweetness.</em></h1>
+          <p class="eyebrow">ASTROLOGY FOR REAL LIFE</p>
+          <h1>Come and sit<br>for a spell.<br><em class="hero-title-accent">Let’s talk about the stars. ⭐️</em></h1>
           <p class="hero-lede">
             A welcoming place to explore your birth chart, understand the people you love,
             and make space for deeper self-knowledge.
@@ -375,31 +373,19 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
           </div>
           <div class="hero-note">
             <span class="tiny-star" aria-hidden="true">✦</span>
-            <span>Light, love, and a little cosmic perspective.</span>
+            <span>Your chart. Your story. Served with a little sweetness.</span>
           </div>
-          <div class="sit-spell" aria-label="Sweet Tea Astrology welcome">
-            <span class="tea-pair" aria-hidden="true">
-              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
-              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
-            </span>
-            <span class="sit-spell-copy">Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
+          <div class="hero-features" aria-label="Sweet Tea Astrology offerings">
+            <div class="hero-feature"><span class="feature-glyph" aria-hidden="true">☾</span><span>Personal<br>readings</span></div>
+            <div class="hero-feature"><span class="feature-glyph" aria-hidden="true">✦</span><span>Monthly<br>classes</span></div>
+            <div class="hero-feature"><span class="feature-glyph" aria-hidden="true">☼</span><span>Guidance<br>for real life</span></div>
           </div>
         </div>
 
         <div class="hero-visual reveal delay-1">
-          <div class="logo-stage">
-            <div class="logo-glow" aria-hidden="true"></div>
-            <div class="orbit-dot dot-one" aria-hidden="true"></div>
-            <div class="orbit-dot dot-two" aria-hidden="true"></div>
-            <img class="hero-logo" src="assets/brand-logo-v1.webp" id="hero-logo" alt="Sweet Tea Astrology celestial logo" width="482" height="482" fetchpriority="high" />
-          </div>
-          <div class="floating-card floating-card-top" aria-hidden="true">
-            <span class="glyph">☾</span>
-            <div><strong>Warm</strong><small>never intimidating</small></div>
-          </div>
-          <div class="floating-card floating-card-bottom" aria-hidden="true">
-            <span class="glyph">✦</span>
-            <div><strong>Personal</strong><small>your chart, your story</small></div>
+          <div class="porch-stage">
+            <img class="porch-image" src="assets/porch-scene-two-teas.webp" alt="A warm moonlit porch with two wicker chairs and two glasses of sweet tea ready for conversation" width="759" height="570" fetchpriority="high" />
+            <div class="porch-badge" aria-hidden="true"><span>☾</span><span>Two chairs. Two teas. One good conversation.</span></div>
           </div>
         </div>
       </div>
