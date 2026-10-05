@@ -67,57 +67,33 @@ button { font: inherit; }
 .button-gold:hover { box-shadow: 0 18px 42px rgba(242,199,119,.24), inset 0 1px rgba(255,255,255,.8); }
 .button-ghost { color: var(--white); background: rgba(255,255,255,.035); border-color: rgba(255,255,255,.2); }
 
-.hero { min-height: 100svh; position: relative; overflow: hidden; padding: 150px 0 0; background:
-  radial-gradient(circle at 72% 20%, rgba(125,76,148,.24), transparent 32%),
-  radial-gradient(circle at 16% 25%, rgba(242,199,119,.08), transparent 22%),
-  linear-gradient(135deg, #060918 0%, #0d1029 50%, #180d2a 100%);
-}
-.hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 65%, rgba(4,5,14,.55)); }
-.stars { position: absolute; inset: 0; opacity: .45; pointer-events: none; }
-.stars-one { background-image: radial-gradient(#fff 0 1px, transparent 1.3px); background-size: 109px 109px; background-position: 16px 29px; mask-image: linear-gradient(to bottom, #000, transparent 90%); }
-.stars-two { background-image: radial-gradient(var(--gold) 0 1px, transparent 1.6px); background-size: 173px 173px; background-position: 90px 40px; opacity: .28; }
-.hero-orbit { position: absolute; border: 1px solid rgba(242,199,119,.15); border-radius: 50%; pointer-events: none; }
-.orbit-a { width: 760px; height: 760px; right: -180px; top: -240px; }
-.orbit-b { width: 1030px; height: 1030px; right: -300px; top: -360px; opacity: .5; }
-.hero-grid { min-height: calc(100svh - 150px); padding-bottom: 120px; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(44px, 7vw, 96px); position: relative; z-index: 2; }
-.hero-copy { max-width: 700px; }
+.hero { min-height: 100svh; position: relative; overflow: hidden; padding: 84px 0 0; background: #070a19; }
+.hero::after { content: ""; position: absolute; inset: 84px 0 58px; pointer-events: none; z-index: 1; background:
+  radial-gradient(circle at 18% 28%, rgba(242,199,119,.08), transparent 23%),
+  linear-gradient(90deg, rgba(7,10,25,.98) 0%, rgba(7,10,25,.94) 28%, rgba(7,10,25,.72) 41%, rgba(7,10,25,.08) 67%, transparent 100%); }
+.hero-scene { position: absolute; inset: 84px 0 58px 37%; z-index: 0; overflow: hidden; background: #11142d; }
+.hero-scene img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; filter: saturate(.98) contrast(1.03); }
+.hero-scene::after { content: ""; position: absolute; inset: 0; pointer-events: none; background:
+  linear-gradient(90deg, rgba(7,10,25,.94) 0%, rgba(7,10,25,.52) 20%, rgba(7,10,25,.08) 48%, transparent 68%),
+  linear-gradient(180deg, rgba(7,10,25,.08), transparent 66%, rgba(7,10,25,.48)); }
+.hero-grid { min-height: calc(100svh - 84px); padding: 86px 0 102px; display: flex; align-items: center; position: relative; z-index: 2; }
+.hero-copy { width: min(620px, 50%); max-width: 620px; padding-right: 26px; }
 .eyebrow { margin: 0 0 24px; color: var(--gold); font-size: 11px; font-weight: 850; letter-spacing: .24em; text-transform: uppercase; }
 .eyebrow-dark { color: var(--gold-2); }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
-h1 { font-size: clamp(58px, 6.3vw, 100px); line-height: .92; letter-spacing: -.055em; }
+h1 { font-size: clamp(58px, 5.85vw, 94px); line-height: .91; letter-spacing: -.052em; text-wrap: balance; }
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
-.hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.69); font-size: 18px; line-height: 1.75; }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
-.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.44); font-family: var(--serif); font-style: italic; font-size: 14px; }
-.sit-spell { margin-top: 28px; display: inline-grid; grid-template-columns: 116px minmax(0,1fr); align-items: center; gap: 18px; max-width: 530px; padding: 11px 22px 11px 12px; border: 1px solid rgba(242,199,119,.42); border-radius: 28px; background: linear-gradient(135deg,rgba(255,250,240,.98),rgba(243,226,197,.97)); color: #3a2042; font-family: var(--serif); font-size: 17px; line-height: 1.45; font-style: italic; box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.52); }
-.tea-pair { position: relative; width: 112px; height: 78px; flex: 0 0 auto; isolation: isolate; }
-.tea-pair img { position: absolute; width: 76px; height: 76px; object-fit: contain; mix-blend-mode: multiply; filter: saturate(1.06) contrast(1.03) drop-shadow(0 6px 12px rgba(88,38,28,.14)); }
-.tea-pair img:first-child { left: 0; bottom: 0; transform: rotate(-7deg); z-index: 1; }
-.tea-pair img:last-child { right: 0; bottom: 0; transform: rotate(7deg); z-index: 2; }
-.sit-spell-copy { display:block; }
-@media (max-width: 520px) {
-  .sit-spell { grid-template-columns: 92px minmax(0,1fr); gap: 12px; width: 100%; padding: 10px 16px 10px 10px; border-radius: 24px; font-size: 15px; }
-  .tea-pair { width: 90px; height: 66px; }
-  .tea-pair img { width: 64px; height: 64px; }
-}
+.hero-title-accent { display: block; margin-top: 14px; font-size: .53em; line-height: 1.08; letter-spacing: -.025em; font-style: italic; }
+.hero-lede { max-width: 590px; margin: 28px 0 0; color: rgba(255,253,248,.78); font-size: 17px; line-height: 1.72; text-shadow: 0 2px 18px rgba(0,0,0,.24); }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 20px; color: rgba(255,253,248,.54); font-family: var(--serif); font-style: italic; font-size: 14px; }
 .tiny-star { color: var(--gold); font-style: normal; }
-.hero-visual { position: relative; min-height: 600px; display: grid; place-items: center; }
-.logo-stage { position: relative; width: min(88%, 520px); aspect-ratio: 1; display: grid; place-items: center; }
-.logo-stage::before { content: ""; position: absolute; inset: -14%; border: 1px solid rgba(242,199,119,.18); border-radius: 50%; transform: rotate(-12deg); }
-.logo-stage::after { content: ""; position: absolute; inset: -24%; border: 1px solid rgba(242,199,119,.08); border-radius: 50%; }
-.logo-glow { position: absolute; width: 90%; height: 90%; border-radius: 50%; background: radial-gradient(circle, rgba(119,58,141,.3), transparent 66%); filter: blur(18px); }
-.hero-logo { position: relative; z-index: 2; width: 100%; height: auto; border-radius: 34px; box-shadow: 0 38px 110px rgba(0,0,0,.48), 0 0 60px rgba(104,54,126,.18); transform: rotate(1.2deg); }
-.orbit-dot { position: absolute; z-index: 3; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 18px rgba(242,199,119,.65); }
-.dot-one { right: -8%; top: 18%; }
-.dot-two { left: -12%; bottom: 27%; width: 6px; height: 6px; }
-.floating-card { position: absolute; z-index: 5; display: flex; align-items: center; gap: 12px; min-width: 176px; padding: 13px 15px; border-radius: 17px; border: 1px solid rgba(255,255,255,.12); background: rgba(12,14,37,.72); backdrop-filter: blur(14px); box-shadow: 0 18px 44px rgba(0,0,0,.28); }
-.floating-card .glyph { color: var(--gold); font-size: 26px; }
-.floating-card div { display: grid; gap: 2px; }
-.floating-card strong { font-family: var(--serif); font-size: 15px; }
-.floating-card small { color: rgba(255,255,255,.52); font-size: 9px; text-transform: uppercase; letter-spacing: .12em; }
-.floating-card-top { top: 13%; left: -3%; }
-.floating-card-bottom { bottom: 12%; right: -2%; }
-.hero-marquee { position: relative; z-index: 3; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); background: rgba(5,7,18,.72); }
+.hero-features { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; max-width: 590px; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(242,199,119,.18); }
+.hero-feature { min-height: 62px; padding: 10px 12px; border-radius: 16px; display: flex; align-items: center; gap: 11px; color: rgba(255,253,248,.78); background: rgba(8,11,27,.34); border: 1px solid rgba(242,199,119,.12); backdrop-filter: blur(10px); transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+.hero-feature:hover { transform: translateY(-2px); background: rgba(8,11,27,.52); border-color: rgba(242,199,119,.28); }
+.hero-feature .feature-glyph { color: var(--gold); font-family: var(--serif); font-size: 26px; line-height: 1; flex: 0 0 auto; }
+.hero-feature span:last-child { font-size: 11px; line-height: 1.35; }
+.hero-marquee { position: relative; z-index: 3; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); background: rgba(5,7,18,.84); }
 .marquee-track { width: max-content; display: flex; align-items: center; gap: 28px; min-height: 58px; color: rgba(255,255,255,.58); font-size: 10px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; animation: marquee 28s linear infinite; }
 .marquee-track b { color: var(--gold); font-size: 8px; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -245,10 +221,9 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .mobile-menu:not([hidden]) { display: grid; gap: 6px; }
   .mobile-menu > a:not(.button) { padding: 14px 10px; border-bottom: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.76); }
   .mobile-menu .button { margin-top: 10px; }
-  .hero-grid { grid-template-columns: 1fr; padding-bottom: 80px; }
-  .hero-copy { max-width: 780px; }
-  .hero-visual { min-height: 520px; }
-  .logo-stage { width: min(70vw, 520px); }
+  .hero-scene { left: 31%; opacity: .9; }
+  .hero-grid { padding: 86px 0 90px; }
+  .hero-copy { width: min(620px, 62%); max-width: 620px; }
   .philosophy-grid { grid-template-columns: 80px 1fr; }
   .philosophy-body { grid-column: 2; padding-top: 0; }
   .process-grid { grid-template-columns: 1fr; }
@@ -268,14 +243,17 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
   .nav-shell { min-height: 74px; }
   .mobile-menu { top: 74px; }
   .brand-name { font-size: 17px; }
-  .hero { padding-top: 116px; }
-  .hero-grid { min-height: auto; gap: 36px; }
+  .hero { padding-top: 74px; min-height: 780px; }
+  .hero::after { inset: 74px 0 52px; background: linear-gradient(180deg, rgba(7,10,25,.64) 0%, rgba(7,10,25,.74) 36%, rgba(7,10,25,.94) 78%, #070a19 100%); }
+  .hero-scene { inset: 74px 0 52px 0; opacity: .72; }
+  .hero-scene img { object-position: center top; }
+  .hero-scene::after { background: linear-gradient(180deg, rgba(7,10,25,.2), rgba(7,10,25,.38) 42%, rgba(7,10,25,.96) 84%, #070a19 100%); }
+  .hero-grid { min-height: 706px; padding: 116px 0 74px; align-items: flex-start; }
+  .hero-copy { width: 100%; max-width: 650px; padding-right: 0; }
   h1 { font-size: clamp(53px, 14.5vw, 76px); }
-  .hero-lede { font-size: 16px; }
-  .hero-visual { min-height: 420px; }
-  .logo-stage { width: min(84vw, 440px); }
-  .floating-card { display: none; }
-  .hero-orbit { opacity: .5; }
+  .hero-title-accent { font-size: .48em; }
+  .hero-lede { font-size: 16px; max-width: 560px; }
+  .hero-features { grid-template-columns: repeat(3, 1fr); max-width: 100%; }
   .marquee-track { min-height: 52px; }
   .philosophy, .readings, .process, .learning, .social, .about { padding: 82px 0; }
   .philosophy-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -305,7 +283,11 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 }
 
 @media (max-width: 460px) {
+  .hero { min-height: 760px; }
+  .hero-grid { min-height: 686px; padding-top: 104px; }
   .hero-buttons { display: grid; }
+  .hero-features { grid-template-columns: 1fr; gap: 8px; }
+  .hero-feature { min-height: 52px; }
   .button { width: 100%; }
   .reading-row { grid-template-columns: 34px 1fr 42px; }
   .circle-link { width: 40px; height: 40px; }
@@ -356,15 +338,14 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="stars stars-one" aria-hidden="true"></div>
-      <div class="stars stars-two" aria-hidden="true"></div>
-      <div class="hero-orbit orbit-a" aria-hidden="true"></div>
-      <div class="hero-orbit orbit-b" aria-hidden="true"></div>
+      <div class="hero-scene" aria-hidden="true">
+        <img src="assets/porch-scene-two-teas.webp" alt="" width="1200" height="775" fetchpriority="high" />
+      </div>
 
       <div class="hero-grid shell">
         <div class="hero-copy reveal">
-          <p class="eyebrow">ASTROLOGY WITH WARMTH, WONDER & CLARITY</p>
-          <h1>Your chart.<br>Your story.<br><em>Served with a little sweetness.</em></h1>
+          <p class="eyebrow">ASTROLOGY FOR REAL LIFE</p>
+          <h1>Come and sit<br>for a spell.<br><em class="hero-title-accent">Let’s talk about the stars. ⭐️</em></h1>
           <p class="hero-lede">
             A welcoming place to explore your birth chart, understand the people you love,
             and make space for deeper self-knowledge.
@@ -375,31 +356,18 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
           </div>
           <div class="hero-note">
             <span class="tiny-star" aria-hidden="true">✦</span>
-            <span>Light, love, and a little cosmic perspective.</span>
+            <span>Your chart. Your story. Served with a little sweetness.</span>
           </div>
-          <div class="sit-spell" aria-label="Sweet Tea Astrology welcome">
-            <span class="tea-pair" aria-hidden="true">
-              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
-              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
-            </span>
-            <span class="sit-spell-copy">Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal delay-1">
-          <div class="logo-stage">
-            <div class="logo-glow" aria-hidden="true"></div>
-            <div class="orbit-dot dot-one" aria-hidden="true"></div>
-            <div class="orbit-dot dot-two" aria-hidden="true"></div>
-            <img class="hero-logo" src="assets/brand-logo-v1.webp" id="hero-logo" alt="Sweet Tea Astrology celestial logo" width="482" height="482" fetchpriority="high" />
-          </div>
-          <div class="floating-card floating-card-top" aria-hidden="true">
-            <span class="glyph">☾</span>
-            <div><strong>Warm</strong><small>never intimidating</small></div>
-          </div>
-          <div class="floating-card floating-card-bottom" aria-hidden="true">
-            <span class="glyph">✦</span>
-            <div><strong>Personal</strong><small>your chart, your story</small></div>
+          <div class="hero-features" aria-label="Sweet Tea Astrology offerings">
+            <a class="hero-feature" href="services.html">
+              <span class="feature-glyph" aria-hidden="true">☾</span><span>Personal<br>readings</span>
+            </a>
+            <a class="hero-feature" href="services.html#circle">
+              <span class="feature-glyph" aria-hidden="true">✦</span><span>Monthly<br>classes</span>
+            </a>
+            <a class="hero-feature" href="#learn">
+              <span class="feature-glyph" aria-hidden="true">☼</span><span>Guidance<br>for real life</span>
+            </a>
           </div>
         </div>
       </div>
