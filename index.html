@@ -89,11 +89,17 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-lede { max-width: 650px; margin: 30px 0 0; color: rgba(255,253,248,.69); font-size: 18px; line-height: 1.75; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.44); font-family: var(--serif); font-style: italic; font-size: 14px; }
-.sit-spell { margin-top: 28px; display: inline-flex; align-items: center; gap: 14px; padding: 10px 18px 10px 10px; border: 1px solid rgba(242,199,119,.22); border-radius: 999px; background: rgba(255,255,255,.035); backdrop-filter: blur(10px); color: rgba(255,253,248,.78); font-family: var(--serif); font-size: 16px; font-style: italic; }
-.tea-pair { position: relative; width: 62px; height: 54px; flex: 0 0 auto; }
-.tea-pair img { position: absolute; width: 49px; height: 49px; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 4px 10px rgba(0,0,0,.22)); }
-.tea-pair img:first-child { left: -2px; bottom: 0; transform: rotate(-5deg); }
-.tea-pair img:last-child { right: -2px; bottom: 1px; transform: rotate(5deg); }
+.sit-spell { margin-top: 28px; display: inline-grid; grid-template-columns: 116px minmax(0,1fr); align-items: center; gap: 18px; max-width: 530px; padding: 11px 22px 11px 12px; border: 1px solid rgba(242,199,119,.42); border-radius: 28px; background: linear-gradient(135deg,rgba(255,250,240,.98),rgba(243,226,197,.97)); color: #3a2042; font-family: var(--serif); font-size: 17px; line-height: 1.45; font-style: italic; box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.52); }
+.tea-pair { position: relative; width: 112px; height: 78px; flex: 0 0 auto; isolation: isolate; }
+.tea-pair img { position: absolute; width: 76px; height: 76px; object-fit: contain; mix-blend-mode: multiply; filter: saturate(1.06) contrast(1.03) drop-shadow(0 6px 12px rgba(88,38,28,.14)); }
+.tea-pair img:first-child { left: 0; bottom: 0; transform: rotate(-7deg); z-index: 1; }
+.tea-pair img:last-child { right: 0; bottom: 0; transform: rotate(7deg); z-index: 2; }
+.sit-spell-copy { display:block; }
+@media (max-width: 520px) {
+  .sit-spell { grid-template-columns: 92px minmax(0,1fr); gap: 12px; width: 100%; padding: 10px 16px 10px 10px; border-radius: 24px; font-size: 15px; }
+  .tea-pair { width: 90px; height: 66px; }
+  .tea-pair img { width: 64px; height: 64px; }
+}
 .tiny-star { color: var(--gold); font-style: normal; }
 .hero-visual { position: relative; min-height: 600px; display: grid; place-items: center; }
 .logo-stage { position: relative; width: min(88%, 520px); aspect-ratio: 1; display: grid; place-items: center; }
@@ -373,10 +379,10 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
           </div>
           <div class="sit-spell" aria-label="Sweet Tea Astrology welcome">
             <span class="tea-pair" aria-hidden="true">
-              <img src="assets/sweet-tea-glass.webp" alt="" width="49" height="49" />
-              <img src="assets/sweet-tea-glass.webp" alt="" width="49" height="49" />
+              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
+              <img src="assets/sweet-tea-glass.webp" alt="" width="76" height="76" />
             </span>
-            <span>Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
+            <span class="sit-spell-copy">Come and sit for a spell. Let’s talk about the stars. ⭐️</span>
           </div>
         </div>
 
