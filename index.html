@@ -156,6 +156,21 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   margin-top: 0;
   justify-content: center;
 }
+.hero-consultation-cta {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+.hero-consultation-tagline {
+  margin: 0;
+  color: rgba(255,253,248,.76);
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.45;
+  text-align: center;
+  text-shadow: 0 2px 16px rgba(0,0,0,.3);
+}
 .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 21px; color: rgba(255,253,248,.62); font-family: var(--serif); font-style: italic; font-size: 14px; }
 .sit-spell { margin-top: 28px; display: inline-grid; grid-template-columns: 116px minmax(0,1fr); align-items: center; gap: 18px; max-width: 530px; padding: 11px 22px 11px 12px; border: 1px solid rgba(242,199,119,.42); border-radius: 28px; background: linear-gradient(135deg,rgba(255,250,240,.98),rgba(243,226,197,.97)); color: #3a2042; font-family: var(--serif); font-size: 17px; line-height: 1.45; font-style: italic; box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.52); }
 .tea-pair { position: relative; width: 112px; height: 78px; flex: 0 0 auto; isolation: isolate; }
@@ -498,7 +513,10 @@ h2 { font-size: clamp(44px, 5.2vw, 78px); line-height: .98; letter-spacing: -.04
 
       <div class="hero-action-dock" aria-label="Homepage actions">
         <div class="hero-buttons">
-          <a class="button button-gold" href="booking.html">Book a consultation <span aria-hidden="true">↗</span></a>
+          <div class="hero-consultation-cta">
+            <a class="button button-gold" href="https://scheduler.zoom.us/therry-sweet-tea-astrology" target="_blank" rel="noopener noreferrer">✨ Book Your Astrology Consultation ✨</a>
+            <p class="hero-consultation-tagline">Your chart. Your story. Served with a little sweetness.</p>
+          </div>
           <a class="button button-ghost" href="#learn">Explore astrology</a>
         </div>
       </div>
